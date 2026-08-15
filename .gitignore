@@ -1,0 +1,21 @@
+# Rust build output
+/target/
+
+# Meson and Flatpak build output
+/build/
+/build-dir/
+/.flatpak-builder/
+/repo/
+*.flatpak
+
+# Release workspace output
+/release-work/
+
+# GNOME Builder build output
+/_build/
+
+# IDE and editor files
+.idea/
+.vscode/
+*~
+.DS_Store

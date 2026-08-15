@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Git Desk
+Comment=Easy to start. Powerful enough to stay.
+Exec=git-desk
+Icon=@APP_ID@
+Terminal=false
+Type=Application
+Categories=Development;RevisionControl;
+Keywords=Git;Version Control;Repository;
+StartupNotify=true

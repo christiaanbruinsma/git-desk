@@ -1,0 +1,7 @@
+option(
+  'profile',
+  type: 'combo',
+  choices: ['production', 'development'],
+  value: 'production',
+  description: 'Application identity profile',
+)

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>@APP_ID@</id>
+  <name>Git Desk</name>
+  <summary>Easy to start. Powerful enough to stay.</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="io.github.christiaanbruinsma">
+    <name>Christiaan Bruinsma</name>
+  </developer>
+  <description>
+    <p>Git Desk is a native GNOME Git client designed to make Git approachable without hiding how Git works.</p>
+    <p>Work with repositories, changes, commits, branches, remotes, stashes and tags from one focused desktop workspace.</p>
+  </description>
+  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <provides>
+    <binary>git-desk</binary>
+  </provides>
+  <url type="homepage">https://github.com/christiaanbruinsma/git-desk</url>
+  <url type="bugtracker">https://github.com/christiaanbruinsma/git-desk/issues</url>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.9.0" date="2026-08-15">
+      <description>
+        <p>First public preview with core Git workflows, repository recovery states, native GNOME integration and release hardening.</p>
+      </description>
+    </release>
+  </releases>
+</component>

@@ -1,0 +1,36 @@
+# GNOME Builder / development manifest.
+app-id: io.github.christiaanbruinsma.GitDesk.Devel
+runtime: org.gnome.Platform
+runtime-version: '50'
+sdk: org.gnome.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+command: git-desk
+
+# Development/localization QA exercises Flatpak's .Locale extension boundary.
+separate-locales: true
+
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+  build-args:
+    - --share=network
+  env:
+    CARGO_HOME: /run/build/git-desk/cargo-home
+
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --share=network
+  - --filesystem=home
+  - --talk-name=org.freedesktop.Flatpak
+
+modules:
+  - name: git-desk
+    buildsystem: meson
+    config-opts:
+      - -Dprofile=development
+    sources:
+      - type: dir
+        path: .

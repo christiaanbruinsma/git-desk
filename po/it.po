@@ -1,0 +1,2143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: git-desk 0.9.0\n"
+"PO-Revision-Date: 2026-08-16 00:36+0200\n"
+"Last-Translator: Christiaan Bruinsma\n"
+"Language-Team: Italiano\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Easy to start. Powerful enough to stay."
+msgstr "Easy to start. Powerful enough to stay."
+
+msgid "Git Desk"
+msgstr "Git Desk"
+
+msgid "https://github.com/owner/repository.git"
+msgstr "https://github.com/owner/repository.git"
+
+msgid "Clone Repository"
+msgstr "Clona repository"
+
+msgid "Enter a Git repository URL. Git Desk will then ask where to create the cloned repository."
+msgstr "Inserisci l’URL di un repository Git. Git Desk chiederà poi dove creare il repository clonato."
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Continue"
+msgstr "Continua"
+
+msgid "Choose Location for Cloned Repository"
+msgstr "Scegli posizione per la repository clonata"
+
+msgid "Choose Project Folder"
+msgstr "Scegli cartella del progetto"
+
+msgid "Open Project"
+msgstr "Apri progetto"
+
+msgid "project"
+msgstr "progetto"
+
+msgid "Project folder not found"
+msgstr "Cartella del progetto non trovata"
+
+msgid "Remove from Recent Projects"
+msgstr "Rimuovi dai progetti recenti"
+
+msgid "Locate Project…"
+msgstr "Trova progetto…"
+
+msgid "Locate Project"
+msgstr "Trova progetto"
+
+msgid "Close"
+msgstr "Chiudi"
+
+msgid "Git Desk can’t find {name} at its saved location. The folder may have been moved or deleted."
+msgstr "Git Desk non trova {name} nella posizione salvata. La cartella potrebbe essere stata spostata o eliminata."
+
+msgid "No textual diff available."
+msgstr "Nessun diff testuale disponibile."
+
+msgid "Repository"
+msgstr "Repository"
+
+msgid "Back to projects"
+msgstr "Torna ai progetti"
+
+msgid "Local project folder"
+msgstr "Cartella progetto locale"
+
+msgid "Open Repository Folder"
+msgstr "Apri cartella repository"
+
+msgid "Refresh repository"
+msgstr "Aggiorna repository"
+
+msgid "Push"
+msgstr "Push"
+
+msgid "Pull"
+msgstr "Pull"
+
+msgid "Fetch"
+msgstr "Fetch"
+
+msgid "Inspector"
+msgstr "Inspector"
+
+msgid "Select an item to inspect it."
+msgstr "Seleziona un elemento da ispezionare."
+
+msgid "Edit Message…"
+msgstr "Modifica messaggio…"
+
+msgid "Change the message of this unpublished commit without including staged changes."
+msgstr "Modifica il messaggio di questo commit non pubblicato senza includere le modifiche in stage."
+
+msgid "Amend"
+msgstr "Amend"
+
+msgid "Add all currently staged changes to this unpublished commit."
+msgstr "Aggiungi tutte le modifiche attualmente in stage a questo commit non pubblicato."
+
+msgid "Undo Commit"
+msgstr "Annulla commit"
+
+msgid "Remove this unpublished commit from the branch and return its contents to staging."
+msgstr "Rimuovi questo commit non pubblicato dal branch e riporta il contenuto nello staging."
+
+msgid "Revert Commit…"
+msgstr "Ripristina commit…"
+
+msgid "Create a new commit that reverses this commit on the current branch."
+msgstr "Crea un nuovo commit che annulla questo commit sul branch corrente."
+
+msgid "Cherry-pick…"
+msgstr "Cherry-pick…"
+
+msgid "Apply this commit on top of the current branch as a new commit."
+msgstr "Applica questo commit sopra il branch corrente come nuovo commit."
+
+msgid "Nothing selected"
+msgstr "Nessuna selezione"
+
+msgid "Select a change, commit, branch, stash, or tag to inspect its details."
+msgstr "Seleziona una modifica, commit, branch, stash o tag per ispezionarne i dettagli."
+
+msgid "Apply"
+msgstr "Applica"
+
+msgid "Apply this stash to the working tree and keep it in the stash list."
+msgstr "Applica questo stash all’albero di lavoro e mantienilo nell’elenco degli stash."
+
+msgid "Pop"
+msgstr "Pop"
+
+msgid "Apply this stash and remove it from the stash list when successful."
+msgstr "Applica questo stash e rimuovilo dall’elenco se l’operazione riesce."
+
+msgid "Delete Stash"
+msgstr "Elimina stash"
+
+msgid "Permanently remove this saved stash without applying it."
+msgstr "Rimuovi definitivamente questo stash salvato senza applicarlo."
+
+msgid "Push Tag…"
+msgstr "Push tag…"
+
+msgid "Push exactly this tag to one configured remote without force-updating an existing remote tag."
+msgstr "Esegui il push solo di questo tag verso un remote configurato senza forzare l’aggiornamento di un tag remoto esistente."
+
+msgid "Delete Tag…"
+msgstr "Elimina tag…"
+
+msgid "Delete this local tag. Tags already present on remotes are not deleted."
+msgstr "Elimina questo tag locale. I tag già presenti sui remote non vengono eliminati."
+
+msgid "Expand Inspector"
+msgstr "Espandi inspector"
+
+msgid "Restore Inspector Width"
+msgstr "Ripristina larghezza ispettore"
+
+msgid "Could Not Open Repository Folder"
+msgstr "Impossibile aprire la cartella del repository"
+
+msgid "Could Not Open Files"
+msgstr "Impossibile aprire i file"
+
+msgid "Working tree clean"
+msgstr "Working tree pulito"
+
+msgid "Resolve conflicted files individually before staging all changes."
+msgstr "Risolvi singolarmente i file in conflitto prima di mettere tutte le modifiche in stage."
+
+msgid "Stage all working-tree changes"
+msgstr "Metti in stage tutte le modifiche"
+
+msgid "Conflict · resolve the file, then mark resolved"
+msgstr "Conflitto · risolvi il file e poi contrassegnalo come risolto"
+
+msgid "Unstage"
+msgstr "Rimuovi dallo stage"
+
+msgid "Mark Resolved"
+msgstr "Segna come risolto"
+
+msgid "Stage"
+msgstr "Stage"
+
+msgid "Stage this resolved file so Git can continue the current operation."
+msgstr "Metti in stage questo file risolto affinché Git possa continuare l’operazione corrente."
+
+msgid "Delete Untracked File…"
+msgstr "Elimina file non tracciato…"
+
+msgid "Discard Changes…"
+msgstr "Scarta modifiche…"
+
+msgid "Show Parent Folder in Files"
+msgstr "Mostra cartella superiore in File"
+
+msgid "Show in Files"
+msgstr "Mostra in File"
+
+msgid "Actions"
+msgstr "Azioni"
+
+msgid "Change actions"
+msgstr "Azioni modifica"
+
+msgid "This file is not tracked by Git. Deleting it cannot be undone by Git Desk."
+msgstr "Questo file non è tracciato da Git. Git Desk non può annullarne l’eliminazione."
+
+msgid "The working-tree version will be restored from Git’s index. Any staged version is kept. This cannot be undone by Git Desk."
+msgstr "La versione nell’albero di lavoro verrà ripristinata dall’indice Git. L’eventuale versione in stage viene mantenuta. Git Desk non può annullare questa operazione."
+
+msgid "Delete File"
+msgstr "Elimina file"
+
+msgid "Discard Changes"
+msgstr "Scarta modifiche"
+
+msgid "Ready to commit"
+msgstr "Pronto per il commit"
+
+msgid "Working tree"
+msgstr "Albero di lavoro"
+
+msgid "Merge commits require choosing an explicit mainline parent. Git Desk does not guess that parent."
+msgstr "I commit di merge richiedono la scelta esplicita di un parent principale. Git Desk non prova a indovinarlo."
+
+msgid "Switch to a normal branch with a clean working tree before applying a history action."
+msgstr "Passa a un branch normale con l’albero di lavoro pulito prima di applicare un’azione della cronologia."
+
+msgid "Finish or abort the current history operation first."
+msgstr "Completa o annulla prima l’operazione di cronologia corrente."
+
+msgid "Create a new commit on the current branch without rewriting existing history."
+msgstr "Crea un nuovo commit sul branch corrente senza riscrivere la cronologia esistente."
+
+msgid "Switch to a normal branch with a clean working tree before cherry-picking a commit."
+msgstr "Passa a un branch normale con l’albero di lavoro pulito prima di eseguire il cherry-pick di un commit."
+
+msgid "Stage changes first to amend this unpublished commit."
+msgstr "Metti prima delle modifiche in stage per modificare questo commit non pubblicato."
+
+msgid "Could Not Load Commit Message"
+msgstr "Impossibile caricare il messaggio del commit"
+
+msgid "Edit Commit Message"
+msgstr "Modifica messaggio commit"
+
+msgid "Change the message of this unpublished commit. Currently staged changes will not be included."
+msgstr "Modifica il messaggio di questo commit non pubblicato. Le modifiche attualmente in stage non verranno incluse."
+
+msgid "Save Message"
+msgstr "Salva messaggio"
+
+msgid "Commit message updated"
+msgstr "Messaggio commit aggiornato"
+
+msgid "Could Not Edit Commit"
+msgstr "Impossibile modificare il commit"
+
+msgid "Amend Unpublished Commit?"
+msgstr "Modificare il commit non pubblicato?"
+
+msgid "Add all currently staged changes to this commit? Its commit ID will change. Nothing will be pushed automatically."
+msgstr "Aggiungere tutte le modifiche attualmente in stage a questo commit? Il suo ID cambierà. Nulla verrà inviato automaticamente."
+
+msgid "Amend Commit"
+msgstr "Modifica commit"
+
+msgid "Staged changes amended into commit"
+msgstr "Modifiche in stage integrate nel commit"
+
+msgid "Could Not Amend Commit"
+msgstr "Impossibile modificare il commit"
+
+msgid "Undo Unpublished Commit?"
+msgstr "Annullare il commit non pubblicato?"
+
+msgid "Remove this commit from the branch and return its contents to the staging area? No files will be deleted. Existing staged changes remain staged."
+msgstr "Rimuovere questo commit dal branch e riportarne il contenuto nello staging? Nessun file verrà eliminato. Le modifiche già in stage rimarranno tali."
+
+msgid "Commit undone — changes returned to staging"
+msgstr "Commit annullato — modifiche riportate nello staging"
+
+msgid "Could Not Undo Commit"
+msgstr "Impossibile annullare il commit"
+
+msgid "History Operation Already in Progress"
+msgstr "Operazione di cronologia già in corso"
+
+msgid "Finish or abort the current Revert/Cherry-pick operation in Changes before starting another one."
+msgstr "Completa o annulla l’operazione Revert/Cherry-pick corrente in Modifiche prima di avviarne un’altra."
+
+msgid "Could Not Check History State"
+msgstr "Impossibile verificare lo stato della cronologia"
+
+msgid "Merge in Progress"
+msgstr "Merge in corso"
+
+msgid "Complete or abort the current merge before applying a history action."
+msgstr "Completa o annulla il merge corrente prima di applicare un’azione della cronologia."
+
+msgid "Could Not Check Merge State"
+msgstr "Impossibile verificare lo stato del merge"
+
+msgid "Could Not Read Repository Status"
+msgstr "Impossibile leggere lo stato del repository"
+
+msgid "Cannot Apply History Action Here"
+msgstr "Impossibile applicare qui un’azione della cronologia"
+
+msgid "Switch to a normal local branch with at least one commit before reverting or cherry-picking."
+msgstr "Passa a un branch locale normale con almeno un commit prima di eseguire un revert o cherry-pick."
+
+msgid "Commit or Stash Changes First"
+msgstr "Esegui prima il commit o lo stash delle modifiche"
+
+msgid "Git Desk starts Revert and Cherry-pick from a clean working tree. Commit your work or save it in Stashes, then try again."
+msgstr "Git Desk avvia Revert e Cherry-pick da un albero di lavoro pulito. Esegui il commit del lavoro o salvalo negli Stash, quindi riprova."
+
+msgid "Commit Is Not on the Current Branch"
+msgstr "Il commit non è sul branch corrente"
+
+msgid "Git Desk only reverts commits that are part of the current branch history. Use Cherry-pick when you want to apply a commit from another branch."
+msgstr "Git Desk annulla solo i commit che fanno parte della cronologia del branch corrente. Usa Cherry-pick per applicare un commit da un altro branch."
+
+msgid "Could Not Verify Commit Ancestry"
+msgstr "Impossibile verificare l’ascendenza del commit"
+
+msgid "Commit Is Already HEAD"
+msgstr "Il commit è già HEAD"
+
+msgid "The selected commit is already the current commit, so there is nothing to cherry-pick."
+msgstr "Il commit selezionato è già quello corrente, quindi non c’è nulla su cui eseguire il cherry-pick."
+
+msgid "Could Not Verify Current Commit"
+msgstr "Impossibile verificare il commit corrente"
+
+msgid "Revert Commit"
+msgstr "Ripristina commit"
+
+msgid "Cherry-pick Commit"
+msgstr "Cherry-pick del commit"
+
+msgid "Repository Changed"
+msgstr "Repository modificato"
+
+msgid "The current branch or working tree changed while the confirmation was open. Review the repository and try again."
+msgstr "Il branch corrente o l’albero di lavoro è cambiato mentre la conferma era aperta. Controlla il repository e riprova."
+
+msgid "Commit reverted"
+msgstr "Commit ripristinato"
+
+msgid "Commit cherry-picked"
+msgstr "Commit applicato con cherry-pick"
+
+msgid "Revert"
+msgstr "Revert"
+
+msgid "Abort Revert"
+msgstr "Annulla revert"
+
+msgid "Cherry-pick"
+msgstr "Cherry-pick"
+
+msgid "Abort Cherry-pick"
+msgstr "Annulla cherry-pick"
+
+msgid "History Action Failed"
+msgstr "Azione della cronologia non riuscita"
+
+msgid "Revert Failed"
+msgstr "Revert non riuscito"
+
+msgid "Cherry-pick Failed"
+msgstr "Cherry-pick non riuscito"
+
+msgid "History Operation Changed"
+msgstr "Operazione di cronologia cambiata"
+
+msgid "A different history operation is now active. Refresh and review Changes before continuing."
+msgstr "Ora è attiva un’altra operazione di cronologia. Aggiorna e controlla Modifiche prima di continuare."
+
+msgid "No History Operation in Progress"
+msgstr "Nessuna operazione di cronologia in corso"
+
+msgid "There is no Revert or Cherry-pick operation to continue."
+msgstr "Non c’è alcuna operazione Revert o Cherry-pick da continuare."
+
+msgid "Could Not Check Conflicts"
+msgstr "Impossibile verificare i conflitti"
+
+msgid "Conflicts Still Need Resolution"
+msgstr "Ci sono ancora conflitti da risolvere"
+
+msgid "Stage Remaining Changes"
+msgstr "Metti in stage le modifiche rimanenti"
+
+msgid "Tracked unstaged changes would not be included when the history operation continues. Stage the resolved changes first."
+msgstr "Le modifiche tracciate non in stage non verrebbero incluse continuando l’operazione. Metti prima in stage le modifiche risolte."
+
+msgid "Revert completed"
+msgstr "Revert completato"
+
+msgid "Cherry-pick completed"
+msgstr "Cherry-pick completato"
+
+msgid "Could Not Continue Revert"
+msgstr "Impossibile continuare il revert"
+
+msgid "Could Not Continue Cherry-pick"
+msgstr "Impossibile continuare il cherry-pick"
+
+msgid "A different history operation is now active. Refresh and review Changes before skipping."
+msgstr "Ora è attiva un’altra operazione di cronologia. Aggiorna e controlla Modifiche prima di saltare."
+
+msgid "No Cherry-pick in Progress"
+msgstr "Nessun cherry-pick in corso"
+
+msgid "There is no Cherry-pick operation to skip."
+msgstr "Non c’è alcuna operazione Cherry-pick da saltare."
+
+msgid "Cherry-pick Still Has Conflicts"
+msgstr "Il cherry-pick ha ancora conflitti"
+
+msgid "Skip is only offered for an empty Cherry-pick. Resolve the conflicts or abort the operation."
+msgstr "Il salto è disponibile solo per un Cherry-pick vuoto. Risolvi i conflitti o annulla l’operazione."
+
+msgid "Cherry-pick Is No Longer Empty"
+msgstr "Il cherry-pick non è più vuoto"
+
+msgid "Tracked changes are present. Review and stage the resolution to continue, or abort the Cherry-pick."
+msgstr "Sono presenti modifiche tracciate. Controlla e metti in stage la risoluzione per continuare, oppure annulla il Cherry-pick."
+
+msgid "Empty Cherry-pick skipped"
+msgstr "Cherry-pick vuoto saltato"
+
+msgid "Could Not Skip Cherry-pick"
+msgstr "Impossibile saltare il cherry-pick"
+
+msgid "Abort Current Revert?"
+msgstr "Annullare il revert corrente?"
+
+msgid "Abort Current Cherry-pick?"
+msgstr "Annullare il cherry-pick corrente?"
+
+msgid "A different history operation is now active. Refresh and review Changes before aborting."
+msgstr "Ora è attiva un’altra operazione di cronologia. Aggiorna e controlla Modifiche prima di annullare."
+
+msgid "There is no Revert or Cherry-pick operation to abort."
+msgstr "Non c’è alcuna operazione Revert o Cherry-pick da annullare."
+
+msgid "Abort Revert Failed"
+msgstr "Annullamento del revert non riuscito"
+
+msgid "Abort Cherry-pick Failed"
+msgstr "Annullamento del cherry-pick non riuscito"
+
+msgid "Could not load local commits not published to a configured remote."
+msgstr "Impossibile caricare i commit locali non pubblicati su un remote configurato."
+
+msgid "Outgoing commits unavailable"
+msgstr "Commit in uscita non disponibili"
+
+msgid "No commits yet"
+msgstr "Nessun commit"
+
+msgid "Your first commit will appear here."
+msgstr "Il primo commit apparirà qui."
+
+msgid "No changed files."
+msgstr "Nessun file modificato."
+
+msgid "Current branch · merge in progress"
+msgstr "Branch corrente · merge in corso"
+
+msgid "Current branch · history operation in progress"
+msgstr "Branch corrente · operazione di cronologia in corso"
+
+msgid "Current branch · first commit not created yet"
+msgstr "Branch corrente · primo commit non ancora creato"
+
+msgid "Current branch"
+msgstr "Branch corrente"
+
+msgid "Remote branch"
+msgstr "Branch remoto"
+
+msgid "Local branch"
+msgstr "Branch locale"
+
+msgid "Switch to Branch"
+msgstr "Passa al branch"
+
+msgid "Merge into Current Branch…"
+msgstr "Unisci nel branch corrente…"
+
+msgid "Abort Merge…"
+msgstr "Interrompi merge…"
+
+msgid "Unset Upstream"
+msgstr "Rimuovi upstream"
+
+msgid "Rename Branch…"
+msgstr "Rinomina branch…"
+
+msgid "Delete Branch…"
+msgstr "Elimina branch…"
+
+msgid "Branch actions"
+msgstr "Azioni branch"
+
+msgid "Remote branch actions"
+msgstr "Azioni branch remoto"
+
+msgid "No local branches yet"
+msgstr "Nessun branch locale"
+
+msgid "No remote branches configured"
+msgstr "Nessun branch remoto configurato"
+
+msgid "feature/my-branch"
+msgstr "feature/my-branch"
+
+msgid "New Branch"
+msgstr "Nuovo branch"
+
+msgid "Create a branch from the current branch and switch to it. Uncommitted changes stay in the working tree."
+msgstr "Crea un branch dal branch corrente e passa ad esso. Le modifiche non committate restano nell’albero di lavoro."
+
+msgid "Create & Switch"
+msgstr "Crea e passa"
+
+msgid "origin/main"
+msgstr "origin/main"
+
+msgid "Enter the remote branch this local branch should track, for example origin/main."
+msgstr "Inserisci il branch remoto che questo branch locale deve seguire, ad esempio origin/main."
+
+msgid "Set Upstream"
+msgstr "Imposta upstream"
+
+msgid "This repository has uncommitted changes. Git Desk will leave them in the working tree. Git may refuse the switch if the target branch would overwrite them."
+msgstr "Questo repository contiene modifiche non committate. Git Desk le lascerà nell’albero di lavoro. Git può rifiutare il cambio se il branch di destinazione le sovrascriverebbe."
+
+msgid "Switch Branch"
+msgstr "Cambia branch"
+
+msgid "Continue Revert"
+msgstr "Continua revert"
+
+msgid "Abort Revert…"
+msgstr "Annulla revert…"
+
+msgid "Continue Cherry-pick"
+msgstr "Continua cherry-pick"
+
+msgid "Abort Cherry-pick…"
+msgstr "Annulla cherry-pick…"
+
+msgid "Finish an empty Cherry-pick without creating a commit."
+msgstr "Completa un cherry-pick vuoto senza creare un commit."
+
+msgid "Continue the current Git history operation using the staged resolution."
+msgstr "Continua l’operazione corrente della cronologia Git usando la risoluzione in stage."
+
+msgid "Git Desk must verify the conflict state before continuing."
+msgstr "Git Desk deve verificare lo stato dei conflitti prima di continuare."
+
+msgid "Git Desk must verify the working tree state before continuing."
+msgstr "Git Desk deve verificare lo stato dell’albero di lavoro prima di continuare."
+
+msgid "Resolve and mark every conflicted file before continuing."
+msgstr "Risolvi e contrassegna ogni file in conflitto prima di continuare."
+
+msgid "There are no tracked changes to commit. Skip the empty Cherry-pick."
+msgstr "Non ci sono modifiche tracciate da committare. Salta il cherry-pick vuoto."
+
+msgid "Stage the remaining tracked changes before continuing."
+msgstr "Metti in stage le modifiche tracciate rimanenti prima di continuare."
+
+msgid "Git Desk could not verify the conflict state. Refresh the repository or abort the merge."
+msgstr "Git Desk non ha potuto verificare lo stato dei conflitti. Aggiorna il repository o annulla il merge."
+
+msgid "Conflicts are resolved, but tracked unstaged changes remain. Stage them before completing the merge."
+msgstr "I conflitti sono risolti, ma restano modifiche tracciate non in stage. Mettile in stage prima di completare il merge."
+
+msgid "All conflicts are resolved and staged. Complete the merge to create the merge commit."
+msgstr "Tutti i conflitti sono risolti e in stage. Completa il merge per creare il commit di merge."
+
+msgid "Create the merge commit using Git’s prepared merge message."
+msgstr "Crea il commit di merge usando il messaggio di merge preparato da Git."
+
+msgid "Git Desk must verify the conflict state before completing the merge."
+msgstr "Git Desk deve verificare lo stato dei conflitti prima di completare il merge."
+
+msgid "Resolve and mark every conflicted file before completing the merge."
+msgstr "Risolvi e contrassegna ogni file in conflitto prima di completare il merge."
+
+msgid "Stage the remaining tracked changes before completing the merge."
+msgstr "Metti in stage le modifiche tracciate rimanenti prima di completare il merge."
+
+msgid "No Merge in Progress"
+msgstr "Nessun merge in corso"
+
+msgid "There is no active merge to complete."
+msgstr "Non c’è alcun merge attivo da completare."
+
+msgid "Tracked unstaged changes would not be included in the merge commit. Stage them first, then complete the merge."
+msgstr "Le modifiche tracciate non in stage non verrebbero incluse nel commit di merge. Mettile prima in stage, quindi completa il merge."
+
+msgid "Merge completed"
+msgstr "Merge completato"
+
+msgid "Complete Merge Failed"
+msgstr "Completamento del merge non riuscito"
+
+msgid "Merge Already in Progress"
+msgstr "Merge già in corso"
+
+msgid "Finish the current merge or abort it before starting another one."
+msgstr "Completa il merge corrente o annullalo prima di avviarne un altro."
+
+msgid "Cannot Merge Here"
+msgstr "Impossibile eseguire il merge qui"
+
+msgid "Check out a normal local branch with at least one commit before merging another branch into it."
+msgstr "Passa a un branch locale normale con almeno un commit prima di unirvi un altro branch."
+
+msgid "Git Desk only starts a branch merge from a clean working tree. Commit your work or save it in Stashes, then try again."
+msgstr "Git Desk avvia un merge di branch solo da un albero di lavoro pulito. Crea un commit o salva il lavoro negli Stash, quindi riprova."
+
+msgid "Git will fast-forward when possible. Otherwise it will create a merge commit. If conflicts occur, Git Desk will keep the merge open so you can resolve the files in Changes or abort the merge from Branches."
+msgstr "Git eseguirà un fast-forward quando possibile. In caso contrario creerà un commit di merge. Se si verificano conflitti, Git Desk manterrà il merge aperto per permetterti di risolvere i file in Modifiche o annullarlo da Branch."
+
+msgid "Merge Branch"
+msgstr "Unisci branch"
+
+msgid "The current branch or working tree changed while the merge confirmation was open. Review the repository and try again."
+msgstr "Il branch corrente o l’albero di lavoro è cambiato mentre la conferma del merge era aperta. Controlla il repository e riprova."
+
+msgid "Merge Failed"
+msgstr "Merge non riuscito"
+
+msgid "Abort Current Merge?"
+msgstr "Interrompere il merge corrente?"
+
+msgid "Discard the changes created by the current merge attempt and restore the branch to its pre-merge state?"
+msgstr "Scartare le modifiche create dal tentativo di merge corrente e ripristinare il branch allo stato precedente al merge?"
+
+msgid "Abort Merge"
+msgstr "Interrompi merge"
+
+msgid "There is no active merge to abort."
+msgstr "Non c’è alcun merge attivo da annullare."
+
+msgid "Merge aborted"
+msgstr "Merge interrotto"
+
+msgid "Abort Merge Failed"
+msgstr "Annullamento del merge non riuscito"
+
+msgid "Rename Branch"
+msgstr "Rinomina branch"
+
+msgid "Renaming a branch changes its local name without changing its commits."
+msgstr "Rinominare un branch ne modifica il nome locale senza cambiare i commit."
+
+msgid "Rename"
+msgstr "Rinomina"
+
+msgid "This removes the local branch reference. Git Desk uses Git’s safe deletion, so Git will refuse if it considers the branch not fully merged."
+msgstr "Questo rimuove il riferimento al branch locale. Git Desk usa l’eliminazione sicura di Git, quindi Git rifiuterà se considera il branch non completamente integrato."
+
+msgid "Delete Branch"
+msgstr "Elimina branch"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "Not checked out"
+msgstr "Non attivo"
+
+msgid "Not configured"
+msgstr "Non configurato"
+
+msgid "Upstream"
+msgstr "Upstream"
+
+msgid "origin"
+msgstr "origin"
+
+msgid "https://github.com/user/repository.git"
+msgstr "https://github.com/user/repository.git"
+
+msgid "Add Remote"
+msgstr "Aggiungi remote"
+
+msgid "Connect this repository to another Git repository. Enter a remote name and URL."
+msgstr "Collega questo repository a un altro repository Git. Inserisci un nome remote e un URL."
+
+msgid "Remove Remote…"
+msgstr "Rimuovi remote…"
+
+msgid "Remote actions"
+msgstr "Azioni remote"
+
+msgid "No remotes configured"
+msgstr "Nessun remote configurato"
+
+msgid "Add a remote to connect this repository to GitHub, GitLab, Codeberg, or another Git server."
+msgstr "Aggiungi un remote per collegare questo repository a GitHub, GitLab, Codeberg o un altro server Git."
+
+msgid "Remove Remote"
+msgstr "Rimuovi remote"
+
+msgid "No saved stashes"
+msgstr "Nessuno stash salvato"
+
+msgid "Loading stash…"
+msgstr "Caricamento stash…"
+
+msgid "This stash has no visible diff."
+msgstr "Questo stash non ha un diff visibile."
+
+msgid "Temporarily save staged and working-tree changes."
+msgstr "Salva temporaneamente le modifiche in stage e nell’albero di lavoro."
+
+msgid "Create the first commit before using Stash."
+msgstr "Crea il primo commit prima di usare Stash."
+
+msgid "Optional stash message"
+msgstr "Messaggio stash opzionale"
+
+msgid "Include untracked files"
+msgstr "Includi file non tracciati"
+
+msgid "Stash Changes"
+msgstr "Metti modifiche in stash"
+
+msgid "Temporarily save your current staged and working-tree changes, then return to a clean working tree."
+msgstr "Salva temporaneamente le modifiche in stage e nell’albero di lavoro, quindi torna a un albero di lavoro pulito."
+
+msgid "Stash Requires a First Commit"
+msgstr "Stash richiede un primo commit"
+
+msgid "Create the repository's first commit before using Stash."
+msgstr "Crea il primo commit del repository prima di usare Stash."
+
+msgid "Stash created"
+msgstr "Stash creato"
+
+msgid "No local changes to stash"
+msgstr "Nessuna modifica locale da mettere in stash"
+
+msgid "Stash Failed"
+msgstr "Stash non riuscito"
+
+msgid "Apply Stash Failed"
+msgstr "Applicazione dello stash non riuscita"
+
+msgid "Pop Stash?"
+msgstr "Fare pop dello stash?"
+
+msgid "Pop Stash"
+msgstr "Pop stash"
+
+msgid "Pop Stash Failed"
+msgstr "Pop dello stash non riuscito"
+
+msgid "Delete Stash?"
+msgstr "Eliminare lo stash?"
+
+msgid "Delete Stash Failed"
+msgstr "Eliminazione dello stash non riuscita"
+
+msgid "No tags"
+msgstr "Nessun tag"
+
+msgid "Annotated"
+msgstr "Annotato"
+
+msgid "Lightweight"
+msgstr "Leggero"
+
+msgid "Annotated tag"
+msgstr "Tag annotato"
+
+msgid "Lightweight tag"
+msgstr "Tag leggero"
+
+msgid "Target Commit"
+msgstr "Commit destinazione"
+
+msgid "Nothing to Tag Yet"
+msgstr "Ancora nulla da taggare"
+
+msgid "Create the first commit before creating a tag."
+msgstr "Crea il primo commit prima di creare un tag."
+
+msgid "Tag name, for example v1.0.0"
+msgstr "Nome del tag, ad esempio v1.0.0"
+
+msgid "Optional tag message"
+msgstr "Messaggio tag opzionale"
+
+msgid "Add a message for an annotated tag. Leave it blank for a lightweight tag."
+msgstr "Aggiungi un messaggio per un tag annotato. Lascia vuoto per un tag lightweight."
+
+msgid "Create Tag"
+msgstr "Crea tag"
+
+msgid "Create a tag at the current HEAD commit."
+msgstr "Crea un tag sul commit HEAD corrente."
+
+msgid "Create Tag Failed"
+msgstr "Creazione del tag non riuscita"
+
+msgid "Could Not Load Remotes"
+msgstr "Impossibile caricare i remote"
+
+msgid "Add a Remote First"
+msgstr "Aggiungi prima un remote"
+
+msgid "Configure a remote before pushing this tag."
+msgstr "Configura un remote prima di eseguire il push di questo tag."
+
+msgid "Push Tag"
+msgstr "Push tag"
+
+msgid "Remote name"
+msgstr "Nome remote"
+
+msgid "Choose a Configured Remote"
+msgstr "Scegli un remote configurato"
+
+msgid "Select one of this repository's configured remotes."
+msgstr "Seleziona uno dei remote configurati per questo repository."
+
+msgid "Push Tag Failed"
+msgstr "Push del tag non riuscito"
+
+msgid "Delete this local tag? If this tag has already been pushed, the remote tag will remain unchanged."
+msgstr "Eliminare questo tag locale? Se il tag è già stato inviato, il tag remoto rimarrà invariato."
+
+msgid "Delete Tag"
+msgstr "Elimina tag"
+
+msgid "Delete Tag Failed"
+msgstr "Eliminazione del tag non riuscita"
+
+msgid "Nothing to Push Yet"
+msgstr "Ancora nulla da inviare"
+
+msgid "Create the first commit before publishing this branch."
+msgstr "Crea il primo commit prima di pubblicare questo branch."
+
+msgid "Detached HEAD"
+msgstr "HEAD scollegato"
+
+msgid "Create or switch to a local branch before pushing."
+msgstr "Crea o passa a un branch locale prima del push."
+
+msgid "Push Failed"
+msgstr "Push non riuscito"
+
+msgid "Add a remote before pushing this branch."
+msgstr "Aggiungi un remote prima di eseguire il push di questo branch."
+
+msgid "Publish Branch"
+msgstr "Pubblica branch"
+
+msgid "Push & Set Upstream"
+msgstr "Push e imposta upstream"
+
+msgid "Choose one of the configured remotes before pushing."
+msgstr "Scegli uno dei remote configurati prima di eseguire il push."
+
+msgid "Fetch completed"
+msgstr "Fetch completato"
+
+msgid "Pull completed"
+msgstr "Pull completato"
+
+msgid "Fetch Failed"
+msgstr "Fetch non riuscito"
+
+msgid "Pull Failed"
+msgstr "Pull non riuscito"
+
+msgid "Fetching…"
+msgstr "Fetch in corso…"
+
+msgid "Pulling…"
+msgstr "Pull in corso…"
+
+msgid "Pushing…"
+msgstr "Push in corso…"
+
+msgid "Changes"
+msgstr "Modifiche"
+
+msgid "History"
+msgstr "Cronologia"
+
+msgid "Branches"
+msgstr "Branch"
+
+msgid "Stashes"
+msgstr "Stash"
+
+msgid "Tags"
+msgstr "Tag"
+
+msgid "Resolve conflicted files to continue the merge."
+msgstr "Risolvi i file in conflitto per continuare il merge."
+
+msgid "Complete Merge"
+msgstr "Completa merge"
+
+msgid "History Operation in Progress"
+msgstr "Operazione cronologia in corso"
+
+msgid "Resolve conflicted files to continue the Git operation."
+msgstr "Risolvi i file in conflitto per continuare l’operazione Git."
+
+msgid "Skip Cherry-pick"
+msgstr "Salta cherry-pick"
+
+msgid "Abort…"
+msgstr "Interrompi…"
+
+msgid "Outgoing"
+msgstr "In uscita"
+
+msgid "Commits ready to push."
+msgstr "Commit pronti per il push."
+
+msgid "Stage All"
+msgstr "Metti tutto in stage"
+
+msgid "Work not selected for your next commit."
+msgstr "Lavoro non selezionato per il prossimo commit."
+
+msgid "Unstage All"
+msgstr "Rimuovi tutto dallo stage"
+
+msgid "Commit message"
+msgstr "Messaggio commit"
+
+msgid "Enter adds a new line · Ctrl+Enter commits"
+msgstr "Invio aggiunge una nuova riga · Ctrl+Invio esegue il commit"
+
+msgid "Commit"
+msgstr "Commit"
+
+msgid "Commit staged changes (Ctrl+Enter)"
+msgstr "Esegui il commit delle modifiche in stage (Ctrl+Invio)"
+
+msgid "Ready to Commit"
+msgstr "Pronto per commit"
+
+msgid "Changes selected for your next saved Git version."
+msgstr "Modifiche selezionate per la prossima versione Git salvata."
+
+msgid "Everything is committed. There are no local changes to review."
+msgstr "Tutto è stato committato. Non ci sono modifiche locali da esaminare."
+
+msgid "Local Branches"
+msgstr "Branch locali"
+
+msgid "Branches stored in this repository."
+msgstr "Branch memorizzati in questa repository."
+
+msgid "Remotes"
+msgstr "Remote"
+
+msgid "Remote repositories connected to this project."
+msgstr "Repository remote collegate a questo progetto."
+
+msgid "Remote Branches"
+msgstr "Branch remoti"
+
+msgid "Branches discovered from configured remotes."
+msgstr "Branch rilevati dai remote configurati."
+
+msgid "Stash Changes…"
+msgstr "Metti modifiche in stash…"
+
+msgid "Saved Work"
+msgstr "Lavoro salvato"
+
+msgid "Temporarily saved working-tree and staged changes."
+msgstr "Modifiche del working tree e staged salvate temporaneamente."
+
+msgid "No stashes yet. Save work here when you need a clean working tree without committing it."
+msgstr "Nessuno stash. Salva qui il lavoro quando ti serve un albero di lavoro pulito senza eseguire il commit."
+
+msgid "New Tag…"
+msgstr "Nuovo tag…"
+
+msgid "Repository Tags"
+msgstr "Tag repository"
+
+msgid "Named references to important commits, such as releases and milestones."
+msgstr "Riferimenti con nome a commit importanti, come release e milestone."
+
+msgid "No tags yet. Create a tag at the current commit when you want to mark a release or milestone."
+msgstr "Nessun tag. Crea un tag sul commit corrente quando vuoi segnare una release o una milestone."
+
+msgid "Detached HEAD · no current branch"
+msgstr "HEAD detached · nessun branch corrente"
+
+msgid "Conflict · resolve the file, then mark resolved · from {old}"
+msgstr "Conflitto · risolvi il file e poi contrassegnalo come risolto · da {old}"
+
+msgid "{status} · from {old}"
+msgstr "{status} · da {old}"
+
+msgid "Marked {path} as resolved"
+msgstr "{path} contrassegnato come risolto"
+
+msgid "Delete {path}?"
+msgstr "Eliminare {path}?"
+
+msgid "Discard changes to {path}?"
+msgstr "Scartare le modifiche a {path}?"
+
+msgid "Revert ‘{subject}’?"
+msgstr "Ripristinare «{subject}»?"
+
+msgid "Create a new commit on '{branch}' that reverses {subject} ({short})? Existing history will not be rewritten. If conflicts occur, Git Desk will keep the Revert open in Changes so you can resolve or abort it."
+msgstr "Creare un nuovo commit su '{branch}' che annulla {subject} ({short})? La cronologia esistente non verrà riscritta. In caso di conflitti, Git Desk manterrà il Revert aperto in Modifiche per permetterti di risolverlo o annullarlo."
+
+msgid "Cherry-pick ‘{subject}’?"
+msgstr "Eseguire il cherry-pick di «{subject}»?"
+
+msgid "Apply {subject} ({short}) on top of '{branch}' as a new commit? Existing history will not be rewritten. If conflicts occur, Git Desk will keep the Cherry-pick open in Changes so you can resolve or abort it."
+msgstr "Applicare {subject} ({short}) sopra '{branch}' come nuovo commit? La cronologia esistente non verrà riscritta. In caso di conflitti, Git Desk manterrà il Cherry-pick aperto in Modifiche per permetterti di risolverlo o annullarlo."
+
+msgid "{action} Needs Attention"
+msgstr "{action} richiede attenzione"
+
+msgid "Git could not complete the {action} automatically. Review the operation in Changes. Resolve and mark any conflicted files, then continue. If an empty Cherry-pick is reported, use Skip Cherry-pick. You can also use {abort}.\n\n{error}"
+msgstr "Git non ha potuto completare automaticamente {action}. Controlla l’operazione in Modifiche. Risolvi e contrassegna i file in conflitto, quindi continua. Se viene segnalato un cherry-pick vuoto, usa Salta cherry-pick. Puoi anche usare {abort}.\n\n{error}"
+
+msgid "{error}\n\nA different history operation is now active. Review Changes before continuing."
+msgstr "{error}\n\nOra è attiva un’altra operazione di cronologia. Controlla Modifiche prima di continuare."
+
+msgid "{error}\n\nGit Desk could not verify whether a history operation remains active: {state_error}"
+msgstr "{error}\n\nGit Desk non ha potuto verificare se un’operazione di cronologia è ancora attiva: {state_error}"
+
+msgid "Discard the changes created by the current {name} attempt and restore the branch to its pre-operation state?"
+msgstr "Scartare le modifiche create dal tentativo {name} corrente e ripristinare il branch allo stato precedente all’operazione?"
+
+msgid "{name} aborted"
+msgstr "{name} annullato"
+
+msgid "Could not load commits ready to push to {upstream}."
+msgstr "Impossibile caricare i commit pronti per il push verso {upstream}."
+
+msgid "{local} local · {remote} remote · merge in progress"
+msgstr "{local} locale · {remote} remoto · merge in corso"
+
+msgid "{local} local · {remote} remote · history operation in progress"
+msgstr "{local} locale · {remote} remoto · operazione di cronologia in corso"
+
+msgid "{local} local · {remote} remote"
+msgstr "{local} locale · {remote} remoto"
+
+msgid "Tracks {upstream}"
+msgstr "Traccia {upstream}"
+
+msgid "Set Upstream for {branch}"
+msgstr "Imposta upstream per {branch}"
+
+msgid "Switch to {branch}?"
+msgstr "Passare a {branch}?"
+
+msgid "{name} in Progress"
+msgstr "{name} in corso"
+
+msgid "Git Desk could not verify the conflict state for {name} {short}. Refresh the repository or abort the operation."
+msgstr "Git Desk non ha potuto verificare lo stato dei conflitti per {name} {short}. Aggiorna il repository o annulla l’operazione."
+
+msgid "Git Desk could not verify the working tree state for {name} {short}. Refresh the repository or abort the operation."
+msgstr "Git Desk non ha potuto verificare lo stato dell’albero di lavoro per {name} {short}. Aggiorna il repository o annulla l’operazione."
+
+msgid "Cherry-pick {short} has no tracked changes left to commit. Skip the empty Cherry-pick or abort it."
+msgstr "Il cherry-pick {short} non ha più modifiche tracciate da committare. Salta il cherry-pick vuoto o annullalo."
+
+msgid "{name} {short} is resolved, but tracked unstaged changes remain. Stage them before continuing."
+msgstr "{name} {short} è risolto, ma restano modifiche tracciate non in stage. Mettile in stage prima di continuare."
+
+msgid "All conflicts for {name} {short} are resolved and staged. Continue the operation to create its commit."
+msgstr "Tutti i conflitti per {name} {short} sono risolti e in stage. Continua l’operazione per creare il commit."
+
+msgid "Unresolved conflicts: {unresolved}. Resolve each file, then mark it resolved."
+msgstr "Conflitti non risolti: {unresolved}. Risolvi ogni file, quindi contrassegnalo come risolto."
+
+msgid "Merge {branch} into {current}?"
+msgstr "Unire {branch} in {current}?"
+
+msgid "Merged {branch} into {current}"
+msgstr "{branch} unito in {current}"
+
+msgid "{error}\n\nCould not verify the merge state: {state_error}"
+msgstr "{error}\n\nImpossibile verificare lo stato del merge: {state_error}"
+
+msgid "Delete {branch}?"
+msgstr "Eliminare {branch}?"
+
+msgid "Remove {name}?"
+msgstr "Rimuovere {name}?"
+
+msgid "This removes the remote configuration for {url}. It does not delete the remote repository or your local commits."
+msgstr "Questo rimuove la configurazione remote per {url}. Il repository remoto e i commit locali non vengono eliminati."
+
+msgid "Saved stash · {reference} · {short}"
+msgstr "Stash salvato · {reference} · {short}"
+
+msgid "Applied {stash}"
+msgstr "{stash} applicato"
+
+msgid "Apply {stash} to the current working tree and remove it from the stash list if Git applies it successfully?"
+msgstr "Applicare {stash} all’albero di lavoro corrente e rimuoverlo dall’elenco degli stash se Git lo applica correttamente?"
+
+msgid "Popped {stash}"
+msgstr "Pop di {stash} completato"
+
+msgid "Permanently remove {stash} without applying its saved changes? This cannot be undone from Git Desk."
+msgstr "Rimuovere definitivamente {stash} senza applicare le modifiche salvate? Git Desk non può annullare questa operazione."
+
+msgid "Deleted {stash}"
+msgstr "{stash} eliminato"
+
+msgid "{kind} · target {short}"
+msgstr "{kind} · destinazione {short}"
+
+msgid "Created {kind} tag {name}"
+msgstr "Tag {kind} {name} creato"
+
+msgid "Push {tag}?"
+msgstr "Push di {tag}?"
+
+msgid "Push this tag to '{remote}'. Git Desk will not force-update an existing remote tag."
+msgstr "Eseguire il push di questo tag verso '{remote}'. Git Desk non forzerà l’aggiornamento di un tag remoto esistente."
+
+msgid "Configured remotes: {remotes}"
+msgstr "Remote configurati: {remotes}"
+
+msgid "Pushed {tag} to {remote}"
+msgstr "{tag} inviato a {remote}"
+
+msgid "Delete {tag}?"
+msgstr "Eliminare {tag}?"
+
+msgid "Deleted local tag {tag}"
+msgstr "Tag locale {tag} eliminato"
+
+msgid "Pushed to {upstream}"
+msgstr "Push verso {upstream}"
+
+msgid "Push '{branch}' to a remote and set its upstream branch."
+msgstr "Eseguire il push di '{branch}' verso un remote e impostare il relativo branch upstream."
+
+msgid "Push '{branch}' to '{remote}' and set it as the upstream branch?"
+msgstr "Eseguire il push di '{branch}' verso '{remote}' e impostarlo come branch upstream?"
+
+msgid "Published {branch} to {remote}"
+msgstr "{branch} pubblicato su {remote}"
+
+msgid "Pulled from {upstream}"
+msgstr "Pull da {upstream}"
+
+msgid "{branch} · no commits yet"
+msgstr "{branch} · nessun commit"
+
+msgid "{branch} · {upstream} · {ahead} ahead · {behind} behind"
+msgstr "{branch} · {upstream} · {ahead} avanti · {behind} indietro"
+
+msgid "{branch} · up to date with {upstream}"
+msgstr "{branch} · aggiornato con {upstream}"
+
+msgid "{branch} · no upstream branch"
+msgstr "{branch} · nessun branch upstream"
+
+msgid "Open an existing Git repository or project folder"
+msgstr "Apri una repository Git o cartella progetto esistente"
+
+msgid "Set Up Git"
+msgstr "Configura Git"
+
+msgid "Choose a project folder and start version control"
+msgstr "Scegli una cartella progetto e avvia il controllo versione"
+
+msgid "Clone an existing Git repository to this computer"
+msgstr "Clona una repository Git esistente su questo computer"
+
+msgid "Git Desk will create repository metadata in a .git folder. Your existing project files are not replaced."
+msgstr "Git Desk creerà i metadati del repository in una cartella .git. I file di progetto esistenti non verranno sostituiti."
+
+msgid "Recent Projects"
+msgstr "Progetti recenti"
+
+msgid "No projects yet"
+msgstr "Nessun progetto"
+
+msgid "Open a project or set up Git to get started."
+msgstr "Apri un progetto o configura Git per iniziare."
+
+msgid "Project"
+msgstr "Progetto"
+
+msgid "Project actions"
+msgstr "Azioni progetto"
+
+msgid "Remove from Recent Projects?"
+msgstr "Rimuovere dai progetti recenti?"
+
+msgid "Remove"
+msgstr "Rimuovi"
+
+msgid "Set up Git for {name}"
+msgstr "Configura Git per {name}"
+
+msgid "Remove {name} from Git Desk’s Recent Projects list? This does not delete the project folder or any files."
+msgstr "Rimuovere {name} dall’elenco Progetti recenti di Git Desk? La cartella del progetto e i file non verranno eliminati."
+
+msgid "About Git Desk"
+msgstr "Informazioni su Git Desk"
+
+msgid "Quit"
+msgstr "Esci"
+
+msgid "Main Menu"
+msgstr "Menu principale"
+
+msgid "{unstaged} change · {staged} ready to commit"
+msgid_plural "{unstaged} changes · {staged} ready to commit"
+msgstr[0] "{unstaged} modifica · {staged} pronta per il commit"
+msgstr[1] "{unstaged} modifiche · {staged} pronte per il commit"
+
+msgid "Resolve and mark all conflicted files before continuing. {count} file is still unresolved."
+msgid_plural "Resolve and mark all conflicted files before continuing. {count} files are still unresolved."
+msgstr[0] "Risolvi e contrassegna tutti i file in conflitto prima di continuare. {count} file è ancora non risolto."
+msgstr[1] "Risolvi e contrassegna tutti i file in conflitto prima di continuare. {count} file sono ancora non risolti."
+
+msgid "{count} commit ready to push to {upstream}"
+msgid_plural "{count} commits ready to push to {upstream}"
+msgstr[0] "{count} commit pronto per il push verso {upstream}"
+msgstr[1] "{count} commit pronti per il push verso {upstream}"
+
+msgid "{count} local commit not published to a configured remote"
+msgid_plural "{count} local commits not published to a configured remote"
+msgstr[0] "{count} commit locale non pubblicato su un remote configurato"
+msgstr[1] "{count} commit locali non pubblicati su un remote configurato"
+
+msgid "{count} recent commit · select a commit to inspect it"
+msgid_plural "{count} recent commits · select a commit to inspect it"
+msgstr[0] "{count} commit recente · seleziona un commit per ispezionarlo"
+msgstr[1] "{count} commit recenti · seleziona un commit per ispezionarlo"
+
+msgid "{name} {short} has {unresolved} unresolved conflict. Resolve the file, then mark it resolved."
+msgid_plural "{name} {short} has {unresolved} unresolved conflicts. Resolve each file, then mark it resolved."
+msgstr[0] "{name} {short} ha {unresolved} conflitto non risolto. Risolvi il file e contrassegnalo come risolto."
+msgstr[1] "{name} {short} ha {unresolved} conflitti non risolti. Risolvi ogni file e contrassegnalo come risolto."
+
+msgid "Resolve and mark all conflicted files before completing the merge. {count} file is still unresolved."
+msgid_plural "Resolve and mark all conflicted files before completing the merge. {count} files are still unresolved."
+msgstr[0] "Risolvi e contrassegna tutti i file in conflitto prima di completare il merge. {count} file è ancora non risolto."
+msgstr[1] "Risolvi e contrassegna tutti i file in conflitto prima di completare il merge. {count} file sono ancora non risolti."
+
+msgid "{count} saved stash · select one to inspect it"
+msgid_plural "{count} saved stashes · select one to inspect it"
+msgstr[0] "{count} stash salvato · selezionalo per ispezionarlo"
+msgstr[1] "{count} stash salvati · selezionane uno per ispezionarlo"
+
+msgid "{count} tag"
+msgid_plural "{count} tags"
+msgstr[0] "{count} tag"
+msgstr[1] "{count} tag"
+
+msgid "Create or switch to a local branch before committing."
+msgstr "Crea o passa a un branch locale prima di creare un commit."
+
+msgid "Confirmation"
+msgstr "Conferma"
+
+msgid "Danger"
+msgstr "Pericolo"
+
+msgid "Notice"
+msgstr "Avviso"
+
+msgid "Warning"
+msgstr "Attenzione"
+
+msgid "Error"
+msgstr "Errore"
+
+msgid "Merge Conflict"
+msgstr "Conflitto di merge"
+
+msgid "Unresolved conflicts: {count}"
+msgstr "Conflitti non risolti: {count}"
+
+msgid "Git could not merge the branches automatically. Resolve each conflict in Changes, mark it resolved, then complete the merge. You can also abort the merge to restore the branch to its previous state."
+msgstr "Git non è riuscito a unire automaticamente i branch. Risolvi ogni conflitto in Modifiche, contrassegnalo come risolto, quindi completa il merge. Puoi anche annullare il merge per ripristinare il branch allo stato precedente."
+
+msgid "Review Conflicts"
+msgstr "Esamina conflitti"
+
+msgid "Mark {path} as resolved?"
+msgstr "Contrassegnare {path} come risolto?"
+
+msgid "This will stage the file as resolved so Git can continue the current operation. Make sure all conflict markers have been resolved."
+msgstr "Questo aggiungerà il file all’indice come risolto, così Git potrà continuare l’operazione corrente. Assicurati che tutti i marcatori di conflitto siano stati risolti."
+
+msgid "Favorites"
+msgstr "Preferiti"
+
+msgid "With Notes"
+msgstr "Con note"
+
+msgid "All Topics"
+msgstr "Tutti gli argomenti"
+
+msgid "Getting Started"
+msgstr "Per iniziare"
+
+msgid "Commits"
+msgstr "Commit"
+
+msgid "Remotes & Sync"
+msgstr "Remote e sincronizzazione"
+
+msgid "Stashes & Tags"
+msgstr "Stash e tag"
+
+msgid "Conflicts & Recovery"
+msgstr "Conflitti e recupero"
+
+msgid "Git Guide"
+msgstr "Guida Git"
+
+msgid "Browse by workflow or search for a Git term. Short explanations help you get started and double as a quick reference."
+msgstr "Sfoglia per workflow o cerca un termine Git. Le spiegazioni brevi aiutano a iniziare e servono anche come riferimento rapido."
+
+msgid "Search terms, commands, or workflows…"
+msgstr "Cerca termini, comandi o workflow…"
+
+msgid "Search the Git Guide (Ctrl+F)"
+msgstr "Cerca nella Guida Git (Ctrl+F)"
+
+msgid "No matching topics. Try another term or choose All Topics."
+msgstr "Nessun argomento corrispondente. Prova un altro termine o scegli Tutti gli argomenti."
+
+msgid "Back to Git Guide"
+msgstr "Torna alla Guida Git"
+
+msgid "Add to Favorites"
+msgstr "Aggiungi ai preferiti"
+
+msgid "Show or hide document sidebar"
+msgstr "Mostra o nascondi la barra laterale del documento"
+
+msgid "In Git Desk"
+msgstr "In Git Desk"
+
+msgid "Git Terminology"
+msgstr "Terminologia Git"
+
+msgid "Related"
+msgstr "Correlati"
+
+msgid "On this page"
+msgstr "In questa pagina"
+
+msgid "Notes"
+msgstr "Note"
+
+msgid "Personal note"
+msgstr "Nota personale"
+
+msgid "Keep a private note for this Git Guide topic."
+msgstr "Conserva una nota privata per questo argomento della Guida Git."
+
+msgid "Saved automatically on this device"
+msgstr "Salvato automaticamente su questo dispositivo"
+
+msgid "Remove from Favorites"
+msgstr "Rimuovi dai preferiti"
+
+msgid "Favorite"
+msgstr "Preferito"
+
+msgid "Has personal note"
+msgstr "Ha una nota personale"
+
+msgid "{count} topic"
+msgid_plural "{count} topics"
+msgstr[0] "{count} argomento"
+msgstr[1] "{count} argomenti"
+
+msgid "No favorite topics yet. Open a topic and use the star button to add it here."
+msgstr "Nessun argomento preferito. Apri un argomento e usa il pulsante a stella per aggiungerlo qui."
+
+msgid "No topics with notes match this search."
+msgstr "Nessun argomento con note corrisponde a questa ricerca."
+
+msgid "A project folder whose history is tracked by Git."
+msgstr "Una cartella di progetto la cui cronologia è tracciata da Git."
+
+msgid "Open a repository to see its changes, history, branches, stashes, and tags in one workspace."
+msgstr "Apri un repository per vedere modifiche, cronologia, branch, stash e tag in un’unica area di lavoro."
+
+msgid "repository, repo, .git"
+msgstr "repository, repo, .git"
+
+msgid "Clone Repository, Working Tree, Commit"
+msgstr "Clona repository, Working tree, Commit"
+
+msgid "Create a local copy of an existing remote Git repository."
+msgstr "Crea una copia locale di un repository Git remoto esistente."
+
+msgid "Use Clone Repository, enter the repository URL, then choose where the new local folder should be created."
+msgstr "Usa Clona repository, inserisci l’URL del repository e poi scegli dove creare la nuova cartella locale."
+
+msgid "clone, remote URL, git clone"
+msgstr "clone, URL remota, git clone"
+
+msgid "Repository, Remote, Origin"
+msgstr "Repository, Remote, origin"
+
+msgid "Open Repository"
+msgstr "Apri repository"
+
+msgid "Open an existing local Git project without changing its history."
+msgstr "Apri un progetto Git locale esistente senza modificarne la cronologia."
+
+msgid "Choose Open Project and select the project folder that contains the repository."
+msgstr "Scegli Apri progetto e seleziona la cartella del progetto che contiene il repository."
+
+msgid "working copy, local repository"
+msgstr "copia di lavoro, repository locale"
+
+msgid "Repository, Working Tree"
+msgstr "Repository, Working tree"
+
+msgid "Working Tree"
+msgstr "Working tree"
+
+msgid "The files you are currently editing in the checked-out repository."
+msgstr "I file che stai modificando nel repository attualmente attivo."
+
+msgid "Changes compares your working tree with the saved Git state and separates unstaged and staged work."
+msgstr "Modifiche confronta il working tree con lo stato Git salvato e separa il lavoro non in stage da quello in stage."
+
+msgid "working tree, worktree, working directory"
+msgstr "working tree, worktree, directory di lavoro"
+
+msgid "Modified File, Untracked File, Stage"
+msgstr "File modificato, File non tracciato, Stage"
+
+msgid "Modified File"
+msgstr "File modificato"
+
+msgid "A tracked file whose contents differ from the last saved Git state."
+msgstr "Un file tracciato il cui contenuto differisce dall’ultimo stato Git salvato."
+
+msgid "Modified files appear in Changes. Inspect the diff, then stage the changes you want in your next commit."
+msgstr "I file modificati compaiono in Modifiche. Controlla il diff, quindi metti in stage le modifiche che vuoi includere nel prossimo commit."
+
+msgid "modified, tracked file, diff"
+msgstr "modificato, file tracciato, diff"
+
+msgid "Stage, Discard Changes, Commit"
+msgstr "Stage, Scarta modifiche, Commit"
+
+msgid "Untracked File"
+msgstr "File non tracciato"
+
+msgid "A file in the project that Git is not tracking yet."
+msgstr "Un file del progetto che Git non sta ancora tracciando."
+
+msgid "Stage an untracked file if it belongs in the repository, or delete it if it should not be kept."
+msgstr "Metti in stage un file non tracciato se deve far parte del repository, oppure eliminalo se non deve essere conservato."
+
+msgid "untracked, new file"
+msgstr "non tracciato, nuovo file"
+
+msgid "Stage, Commit"
+msgstr "Stage, Commit"
+
+msgid "Choose changes that will be included in your next commit."
+msgstr "Scegli le modifiche che verranno incluse nel prossimo commit."
+
+msgid "Stage a file from Changes. Git Desk moves it to the ready-to-commit section."
+msgstr "Metti in stage un file da Modifiche. Git Desk lo sposta nella sezione pronta per il commit."
+
+msgid "stage, staging area, index, git add"
+msgstr "stage, staging area, index, git add"
+
+msgid "Unstage, Commit, Stage All"
+msgstr "Rimuovi dallo stage, Commit, Metti tutto in stage"
+
+msgid "Remove a change from the next commit without discarding the file edit."
+msgstr "Rimuovi una modifica dal prossimo commit senza scartare la modifica al file."
+
+msgid "Unstage a ready-to-commit file to move it back to the unstaged changes list."
+msgstr "Rimuovi dallo stage un file pronto per il commit per riportarlo nell’elenco delle modifiche non in stage."
+
+msgid "unstage, index, restore --staged"
+msgstr "unstage, index, restore --staged"
+
+msgid "Stage, Commit, Discard Changes"
+msgstr "Stage, Commit, Scarta modifiche"
+
+msgid "Stage All / Unstage All"
+msgstr "Metti tutto in stage / rimuovi tutto dallo stage"
+
+msgid "Move all current changes into or out of the next commit selection."
+msgstr "Sposta tutte le modifiche correnti dentro o fuori dalla selezione del prossimo commit."
+
+msgid "Use Stage All when everything belongs in one commit. Use Unstage All when you want to rebuild the selection."
+msgstr "Usa Metti tutto in stage quando tutto appartiene a un unico commit. Usa Rimuovi tutto dallo stage quando vuoi ricostruire la selezione."
+
+msgid "stage all, unstage all, index"
+msgstr "metti tutto in stage, rimuovi tutto dallo stage, index"
+
+msgid "Stage, Unstage, Commit"
+msgstr "Stage, Rimuovi dallo stage, Commit"
+
+msgid "Permanently throw away local edits that have not been committed."
+msgstr "Elimina definitivamente le modifiche locali che non sono ancora state incluse in un commit."
+
+msgid "Use Discard Changes only when you are sure the local edits are no longer needed. Git Desk asks for confirmation first."
+msgstr "Usa Scarta modifiche solo quando sei certo che le modifiche locali non servano più. Git Desk chiede prima una conferma."
+
+msgid "discard, restore, delete untracked file"
+msgstr "discard, restore, delete untracked file"
+
+msgid "Modified File, Untracked File, Stash"
+msgstr "File modificato, File non tracciato, Stash"
+
+msgid "Save the currently staged changes as a new point in the repository history."
+msgstr "Salva le modifiche attualmente in stage come un nuovo punto nella cronologia del repository."
+
+msgid "Stage the intended changes, write a clear commit message, then press Commit."
+msgstr "Metti in stage le modifiche desiderate, scrivi un messaggio di commit chiaro e poi premi Commit."
+
+msgid "commit, snapshot, commit ID, SHA"
+msgstr "commit, snapshot, commit ID, SHA"
+
+msgid "Stage, Commit Message, History"
+msgstr "Stage, Messaggio di commit, Cronologia"
+
+msgid "Commit Message"
+msgstr "Messaggio di commit"
+
+msgid "A short explanation of why a set of changes was saved."
+msgstr "Una breve spiegazione del motivo per cui è stato salvato un insieme di modifiche."
+
+msgid "Write the message beside the Commit button. Keep the first line short and describe the purpose of the change."
+msgstr "Scrivi il messaggio accanto al pulsante Commit. Mantieni breve la prima riga e descrivi lo scopo della modifica."
+
+msgid "subject, commit message"
+msgstr "oggetto, messaggio di commit"
+
+msgid "Commit, Amend"
+msgstr "Commit, Amend"
+
+msgid "Replace your latest unpublished commit with an updated version."
+msgstr "Sostituisci il commit non pubblicato più recente con una versione aggiornata."
+
+msgid "Select the latest unpublished commit in History and use Amend to add currently staged changes to it."
+msgstr "Seleziona il commit non pubblicato più recente in Cronologia e usa Amend per aggiungervi le modifiche attualmente in stage."
+
+msgid "amend, rewrite latest commit"
+msgstr "amend, riscrivi ultimo commit"
+
+msgid "Commit, Stage, Undo Commit"
+msgstr "Commit, Stage, Annulla commit"
+
+msgid "Remove the latest unpublished commit while returning its contents to staging."
+msgstr "Rimuovi il commit non pubblicato più recente riportandone il contenuto nello stage."
+
+msgid "Use Undo Commit from the Inspector when the latest unpublished commit should be rebuilt rather than kept."
+msgstr "Usa Annulla commit dall’Inspector quando l’ultimo commit non pubblicato deve essere ricostruito invece di essere mantenuto."
+
+msgid "undo commit, reset, staged changes"
+msgstr "annulla commit, reset, modifiche in stage"
+
+msgid "Amend, Commit, Stage"
+msgstr "Amend, Commit, Stage"
+
+msgid "Branch"
+msgstr "Branch"
+
+msgid "A movable line of development that points to a sequence of commits."
+msgstr "Una linea di sviluppo mobile che punta a una sequenza di commit."
+
+msgid "Branches shows local branches, configured remotes, and remote-tracking branches together."
+msgstr "Branch mostra insieme i branch locali, i remote configurati e i branch di tracking remoto."
+
+msgid "branch, ref"
+msgstr "branch, ref"
+
+msgid "Current Branch, Switch Branch, Merge"
+msgstr "Branch corrente, Cambia branch, Merge"
+
+msgid "Current Branch"
+msgstr "Branch corrente"
+
+msgid "The branch that receives new commits from your current working tree."
+msgstr "Il branch che riceve i nuovi commit dal working tree corrente."
+
+msgid "Git Desk marks the current branch and shows its upstream, ahead, and behind state when available."
+msgstr "Git Desk contrassegna il branch corrente e mostra, quando disponibili, upstream e stato Ahead e Behind."
+
+msgid "current branch, checked out branch, HEAD"
+msgstr "branch corrente, branch attivo, HEAD"
+
+msgid "HEAD, Upstream Branch, Ahead / Behind"
+msgstr "HEAD, Branch upstream, Ahead / Behind"
+
+msgid "Change which branch is checked out in the working tree."
+msgstr "Cambia il branch attivo nel working tree."
+
+msgid "Select another local branch in Branches and switch to it. Commit or stash conflicting local work first when necessary."
+msgstr "Seleziona un altro branch locale in Branch e passa a quello. Fai commit o stash del lavoro locale in conflitto prima, quando necessario."
+
+msgid "switch, checkout"
+msgstr "cambia, checkout"
+
+msgid "Branch, Stash, Current Branch"
+msgstr "Branch, Stash, Branch corrente"
+
+msgid "Create a new branch so work can develop separately from the current line."
+msgstr "Crea un nuovo branch affinché il lavoro possa svilupparsi separatamente dalla linea corrente."
+
+msgid "Use New Branch in Branches. The new branch starts from the currently selected Git position."
+msgstr "Usa Nuovo branch in Branch. Il nuovo branch parte dalla posizione Git attualmente selezionata."
+
+msgid "create branch, branch name"
+msgstr "crea branch, nome branch"
+
+msgid "Branch, Switch Branch, Merge"
+msgstr "Branch, Cambia branch, Merge"
+
+msgid "Local vs Remote Branch"
+msgstr "Branch locale vs remoto"
+
+msgid "A local branch is yours to edit; a remote-tracking branch records a branch last seen on a remote."
+msgstr "Un branch locale è modificabile da te; un branch di tracking remoto registra l’ultimo stato visto di un branch su un remote."
+
+msgid "Branches separates Local Branches from Remote Branches so you can see which state is local and which came from a remote."
+msgstr "Branch separa Branch locali da Branch remoti, così puoi distinguere lo stato locale da quello proveniente da un remote."
+
+msgid "local branch, remote-tracking branch, refs/remotes"
+msgstr "branch locale, branch di tracking remoto, refs/remotes"
+
+msgid "Remote, Fetch, Upstream Branch"
+msgstr "Remote, Fetch, Branch upstream"
+
+msgid "Merge"
+msgstr "Merge"
+
+msgid "Combine another branch into the current branch."
+msgstr "Combina un altro branch con il branch corrente."
+
+msgid "Merge a branch into the current branch from Branches. Git Desk fast-forwards when possible and keeps conflicts open for recovery."
+msgstr "Esegui il merge di un branch nel branch corrente da Branch. Git Desk esegue un fast-forward quando possibile e mantiene aperti i conflitti per il recupero."
+
+msgid "merge, merge commit, fast-forward"
+msgstr "merge, merge commit, fast-forward"
+
+msgid "Fast-forward, Conflict, Abort Operation"
+msgstr "Fast-forward, Conflitto, Annulla operazione"
+
+msgid "Remote"
+msgstr "Remote"
+
+msgid "A named connection to another copy of the repository, usually on a server."
+msgstr "Una connessione con nome a un’altra copia del repository, normalmente su un server."
+
+msgid "Branches lists configured remotes and lets you add a remote repository URL."
+msgstr "Branch elenca i remote configurati e consente di aggiungere l’URL di un repository remoto."
+
+msgid "remote, remote URL"
+msgstr "remote, URL remota"
+
+msgid "Origin, Fetch, Push"
+msgstr "origin, Fetch, Push"
+
+msgid "Origin"
+msgstr "origin"
+
+msgid "The conventional name Git gives to the remote a repository was cloned from."
+msgstr "Il nome convenzionale che Git assegna al remote da cui è stato clonato un repository."
+
+msgid "Origin is shown like any other remote. The name is conventional, not mandatory."
+msgstr "origin viene mostrato come qualsiasi altro remote. Il nome è convenzionale, non obbligatorio."
+
+msgid "origin, remote name"
+msgstr "origin, nome remote"
+
+msgid "Remote, Clone Repository, Upstream Branch"
+msgstr "Remote, Clona repository, Branch upstream"
+
+msgid "Upstream Branch"
+msgstr "Branch upstream"
+
+msgid "The remote-tracking branch your local branch follows for pull and push status."
+msgstr "Il branch di tracking remoto seguito dal branch locale per lo stato di Pull e Push."
+
+msgid "Git Desk shows the upstream beside local branches and uses it to calculate ahead and behind counts."
+msgstr "Git Desk mostra l’upstream accanto ai branch locali e lo usa per calcolare i conteggi Ahead e Behind."
+
+msgid "upstream, tracking branch"
+msgstr "upstream, branch di tracking"
+
+msgid "Ahead / Behind, Pull, Push"
+msgstr "Ahead / Behind, Pull, Push"
+
+msgid "Download updated remote branch and tag information without changing your working files."
+msgstr "Scarica informazioni aggiornate su branch remoti e tag senza modificare i file di lavoro."
+
+msgid "Use Fetch when you want the latest remote state before deciding whether to pull, merge, or inspect differences."
+msgstr "Usa Fetch quando vuoi lo stato remoto più recente prima di decidere se fare Pull, Merge o controllare le differenze."
+
+msgid "fetch, git fetch, remote-tracking branch"
+msgstr "fetch, git fetch, branch di tracking remoto"
+
+msgid "Pull, Remote, Ahead / Behind"
+msgstr "Pull, Remote, Ahead / Behind"
+
+msgid "Bring upstream commits into the current local branch."
+msgstr "Porta i commit upstream nel branch locale corrente."
+
+msgid "Git Desk uses fast-forward-only Pull. If local and remote history diverged, fetch first and merge the appropriate branch explicitly."
+msgstr "Git Desk usa Pull solo in fast-forward. Se la cronologia locale e quella remota sono divergenti, fai prima Fetch e poi esegui esplicitamente il merge del branch appropriato."
+
+msgid "pull, git pull --ff-only, fast-forward"
+msgstr "pull, git pull --ff-only, fast-forward"
+
+msgid "Fetch, Fast-forward, Diverged"
+msgstr "Fetch, Fast-forward, Divergenti"
+
+msgid "Send local commits to the branch's configured remote."
+msgstr "Invia i commit locali al remote configurato del branch."
+
+msgid "Use Push when your branch has commits that the upstream does not have yet."
+msgstr "Usa Push quando il branch contiene commit che l’upstream non ha ancora."
+
+msgid "push, git push"
+msgstr "push, git push"
+
+msgid "Upstream Branch, Ahead / Behind, Remote"
+msgstr "Branch upstream, Ahead / Behind, Remote"
+
+msgid "Ahead / Behind"
+msgstr "Ahead / Behind"
+
+msgid "Counts showing how local and upstream branch histories differ."
+msgstr "Conteggi che mostrano come differiscono le cronologie del branch locale e dell’upstream."
+
+msgid "Ahead means local commits are waiting to be pushed. Behind means the upstream contains commits you do not have locally."
+msgstr "Ahead significa che ci sono commit locali in attesa di Push. Behind significa che l’upstream contiene commit che non hai ancora localmente."
+
+msgid "ahead, behind, upstream"
+msgstr "ahead, behind, upstream"
+
+msgid "Fetch, Pull, Push"
+msgstr "Fetch, Pull, Push"
+
+msgid "Diverged"
+msgstr "Divergenti"
+
+msgid "Both local and upstream branches contain commits the other side does not have."
+msgstr "Sia il branch locale sia quello upstream contengono commit che l’altro lato non possiede."
+
+msgid "Fetch to refresh the remote state, then review the branches and merge deliberately. Git Desk does not hide this behind a non-fast-forward Pull."
+msgstr "Esegui Fetch per aggiornare lo stato remoto, poi controlla i branch ed esegui il merge consapevolmente. Git Desk non nasconde questa situazione dietro un Pull non fast-forward."
+
+msgid "diverged, non-fast-forward"
+msgstr "diverged, non-fast-forward"
+
+msgid "Fetch, Merge, Pull"
+msgstr "Fetch, Merge, Pull"
+
+msgid "Fast-forward"
+msgstr "Fast-forward"
+
+msgid "Move a branch pointer forward when no competing history needs to be combined."
+msgstr "Sposta in avanti il puntatore di un branch quando non c’è una cronologia concorrente da combinare."
+
+msgid "Pull requires a fast-forward. Merge also fast-forwards automatically when the current branch has no competing commits."
+msgstr "Pull richiede un fast-forward. Merge esegue automaticamente un fast-forward anche quando il branch corrente non ha commit concorrenti."
+
+msgid "fast-forward, ff, ff-only"
+msgstr "fast-forward, ff, ff-only"
+
+msgid "Pull, Merge, Diverged"
+msgstr "Pull, Merge, Divergenti"
+
+msgid "Stash"
+msgstr "Stash"
+
+msgid "Temporarily save unfinished working-tree changes without making a commit."
+msgstr "Salva temporaneamente modifiche non completate del working tree senza creare un commit."
+
+msgid "Use Stash Changes when you need a clean working tree before switching branches or starting another Git operation."
+msgstr "Usa Metti modifiche in stash quando ti serve un working tree pulito prima di cambiare branch o avviare un’altra operazione Git."
+
+msgid "stash, stash entry"
+msgstr "stash, stash entry"
+
+msgid "Apply Stash, Pop Stash, Working Tree"
+msgstr "Applica stash, Pop stash, Working tree"
+
+msgid "Apply Stash"
+msgstr "Applica stash"
+
+msgid "Restore a stash to the working tree while keeping the stash entry saved."
+msgstr "Ripristina uno stash nel working tree mantenendo salvata la voce dello stash."
+
+msgid "Select a stash and use Apply when you may want to reuse or keep that saved snapshot afterward."
+msgstr "Seleziona uno stash e usa Applica quando potresti voler riutilizzare o conservare in seguito quello snapshot salvato."
+
+msgid "stash apply"
+msgstr "stash apply"
+
+msgid "Stash, Pop Stash"
+msgstr "Stash, Pop stash"
+
+msgid "Restore a stash and remove the stash entry when the operation succeeds."
+msgstr "Ripristina uno stash e rimuove la voce dello stash quando l’operazione riesce."
+
+msgid "Use Pop when you are ready to resume the stashed work and no longer need the saved stash entry."
+msgstr "Usa Pop quando sei pronto a riprendere il lavoro nello stash e non hai più bisogno della voce salvata."
+
+msgid "stash pop"
+msgstr "stash pop"
+
+msgid "Stash, Apply Stash"
+msgstr "Stash, Applica stash"
+
+msgid "Tag"
+msgstr "Tag"
+
+msgid "A stable name attached to a specific commit, often used for releases and milestones."
+msgstr "Un nome stabile associato a un commit specifico, spesso usato per release e traguardi."
+
+msgid "Tags lets you create a tag at the current commit, inspect tags, push a tag, or delete a local tag."
+msgstr "Tag consente di creare un tag sul commit corrente, ispezionare i tag, fare Push di un tag o eliminare un tag locale."
+
+msgid "tag, ref, release tag"
+msgstr "tag, ref, tag di release"
+
+msgid "Commit, History, Push"
+msgstr "Commit, Cronologia, Push"
+
+msgid "The ordered record of commits that make up the repository."
+msgstr "La sequenza ordinata dei commit che costituiscono il repository."
+
+msgid "History shows the most recent commits with graph lanes, references, messages, and commit details in the Inspector."
+msgstr "Cronologia mostra i commit più recenti con linee del grafo, riferimenti, messaggi e dettagli del commit nell’Inspector."
+
+msgid "history, log, commit graph"
+msgstr "cronologia, log, commit graph"
+
+msgid "Commit, HEAD, Revert"
+msgstr "Commit, HEAD, Revert"
+
+msgid "HEAD"
+msgstr "HEAD"
+
+msgid "Git's reference to the commit or branch currently checked out."
+msgstr "Il riferimento Git al commit o branch attualmente attivo."
+
+msgid "Normally HEAD follows the current branch. History decorations help show where HEAD points."
+msgstr "Normalmente HEAD segue il branch corrente. Le decorazioni in Cronologia aiutano a mostrare dove punta HEAD."
+
+msgid "HEAD, ref, current commit"
+msgstr "HEAD, ref, commit corrente"
+
+msgid "Current Branch, Detached HEAD, History"
+msgstr "Branch corrente, HEAD scollegato, Cronologia"
+
+msgid "HEAD points directly to a commit instead of following a local branch."
+msgstr "HEAD punta direttamente a un commit invece di seguire un branch locale."
+
+msgid "Git Desk identifies Detached HEAD clearly. Create or switch to a branch before making work you intend to keep on a named branch."
+msgstr "Git Desk identifica chiaramente un HEAD scollegato. Crea un branch o passa a un branch prima di fare lavoro che vuoi conservare su un branch con nome."
+
+msgid "detached HEAD, checkout commit"
+msgstr "detached HEAD, checkout commit"
+
+msgid "HEAD, New Branch, Switch Branch"
+msgstr "HEAD, Nuovo branch, Cambia branch"
+
+msgid "Create a new commit that reverses the effect of an older commit without rewriting existing history."
+msgstr "Crea un nuovo commit che inverte l’effetto di un commit precedente senza riscrivere la cronologia esistente."
+
+msgid "Select a commit in History and choose Revert Commit. If conflicts occur, resolve them in Changes and continue or abort the Revert."
+msgstr "Seleziona un commit in Cronologia e scegli Revert. Se si verificano conflitti, risolvili in Modifiche e continua o annulla il Revert."
+
+msgid "revert, inverse commit"
+msgstr "revert, commit inverso"
+
+msgid "Conflict, Continue Operation, Abort Operation"
+msgstr "Conflitto, Continua operazione, Annulla operazione"
+
+msgid "Apply the changes introduced by one existing commit on top of the current branch as a new commit."
+msgstr "Applica le modifiche introdotte da un commit esistente sopra il branch corrente come nuovo commit."
+
+msgid "Select a commit in History and choose Cherry-pick. Resolve conflicts in Changes, then continue, skip an empty Cherry-pick, or abort."
+msgstr "Seleziona un commit in Cronologia e scegli Cherry-pick. Risolvi i conflitti in Modifiche, poi continua, salta un Cherry-pick vuoto o annulla."
+
+msgid "cherry-pick, apply commit"
+msgstr "cherry-pick, applica commit"
+
+msgid "Conflict, Skip Cherry-pick, Abort Operation"
+msgstr "Conflitto, Salta cherry-pick, Annulla operazione"
+
+msgid "Conflict"
+msgstr "Conflitto"
+
+msgid "Git needs your decision because competing changes cannot be combined automatically."
+msgstr "Git richiede una tua decisione perché le modifiche concorrenti non possono essere combinate automaticamente."
+
+msgid "Conflicted files appear in Changes during Merge, Revert, or Cherry-pick recovery. Open each file, resolve the competing content, then mark it resolved."
+msgstr "I file in conflitto compaiono in Modifiche durante il recupero di Merge, Revert o Cherry-pick. Apri ogni file, risolvi i contenuti concorrenti e poi segnalo come risolto."
+
+msgid "conflict, unmerged path, ours, theirs"
+msgstr "conflict, percorso non unito, ours, theirs"
+
+msgid "Conflict Markers, Mark Resolved, Abort Operation"
+msgstr "Marcatori di conflitto, Segna come risolto, Annulla operazione"
+
+msgid "Conflict Markers"
+msgstr "Marcatori di conflitto"
+
+msgid "Text markers Git writes into a conflicted file to show competing versions."
+msgstr "Marcatori di testo che Git scrive in un file in conflitto per mostrare versioni concorrenti."
+
+msgid "The Inspector shows the conflicted file contents. Edit the file so the final content is correct and remove all conflict markers before marking it resolved."
+msgstr "L’Inspector mostra il contenuto del file in conflitto. Modifica il file finché il contenuto finale è corretto e rimuovi tutti i marcatori di conflitto prima di segnarlo come risolto."
+
+msgid "<<<<<<<, =======, >>>>>>>"
+msgstr "<<<<<<<, =======, >>>>>>>"
+
+msgid "Conflict, Mark Resolved"
+msgstr "Conflitto, Segna come risolto"
+
+msgid "Tell Git that you have finished resolving a conflicted file."
+msgstr "Comunica a Git che hai terminato la risoluzione di un file in conflitto."
+
+msgid "After editing a conflicted file to its final form, choose Mark Resolved. Git Desk stages that resolution and rechecks the operation state."
+msgstr "Dopo aver modificato un file in conflitto nella sua forma finale, scegli Segna come risolto. Git Desk mette in stage la risoluzione e ricontrolla lo stato dell’operazione."
+
+msgid "mark resolved, stage resolution, git add"
+msgstr "segna come risolto, metti la risoluzione in stage, git add"
+
+msgid "Conflict, Continue Operation"
+msgstr "Conflitto, Continua operazione"
+
+msgid "Continue Operation"
+msgstr "Continua operazione"
+
+msgid "Finish an interrupted Git operation after all required conflict resolutions are staged."
+msgstr "Completa un’operazione Git interrotta dopo che tutte le risoluzioni dei conflitti richieste sono state messe in stage."
+
+msgid "Continue becomes available when Git Desk verifies that the operation has no unresolved conflicts and the required resolution is ready."
+msgstr "Continua diventa disponibile quando Git Desk verifica che l’operazione non abbia conflitti irrisolti e che la risoluzione richiesta sia pronta."
+
+msgid "continue, merge continue, revert continue, cherry-pick continue"
+msgstr "continue, merge continue, revert continue, cherry-pick continue"
+
+msgid "Mark Resolved, Abort Operation, Skip Cherry-pick"
+msgstr "Segna come risolto, Annulla operazione, Salta cherry-pick"
+
+msgid "Abort Operation"
+msgstr "Annulla operazione"
+
+msgid "Cancel the current Merge, Revert, or Cherry-pick and restore its pre-operation state."
+msgstr "Annulla il Merge, Revert o Cherry-pick corrente e ripristina lo stato precedente all’operazione."
+
+msgid "Use the operation's Abort action when you do not want to finish the in-progress history change. Git Desk asks for confirmation first."
+msgstr "Usa l’azione Annulla dell’operazione quando non vuoi completare la modifica della cronologia in corso. Git Desk chiede prima una conferma."
+
+msgid "abort, merge --abort, revert --abort, cherry-pick --abort"
+msgstr "abort, merge --abort, revert --abort, cherry-pick --abort"
+
+msgid "Finish an empty Cherry-pick when there are no tracked changes left to commit."
+msgstr "Completa un Cherry-pick vuoto quando non restano modifiche tracciate da includere in un commit."
+
+msgid "Git Desk offers Skip Cherry-pick only when the active Cherry-pick is empty and no unresolved conflicts remain."
+msgstr "Git Desk offre Salta cherry-pick solo quando il Cherry-pick attivo è vuoto e non restano conflitti irrisolti."
+
+msgid "cherry-pick --skip, empty cherry-pick"
+msgstr "cherry-pick --skip, cherry-pick vuoto"
+
+msgid "Cherry-pick, Continue Operation, Abort Operation"
+msgstr "Cherry-pick, Continua operazione, Annulla operazione"
+
+msgid "Git could not complete the {action} automatically. Review the operation in Changes. Resolve and mark any conflicted files, then continue. You can also use {abort}.\n\n{error}"
+msgstr "Git non ha potuto completare automaticamente {action}. Controlla l’operazione in Modifiche. Risolvi i file in conflitto e segnali come risolti, quindi continua. Puoi anche usare {abort}.\n\n{error}"
+
+msgid "Newest"
+msgstr "Più recente"
+
+msgid "Older commits not shown"
+msgstr "Commit precedenti non mostrati"
+
+msgid "Initial commit"
+msgstr "Commit iniziale"
+
+msgid "Beginning of available history"
+msgstr "Inizio della cronologia disponibile"
+
+msgid "Author"
+msgstr "Autore"
+
+msgid "Authored"
+msgstr "Creato"
+
+msgid "Parent"
+msgstr "Parent"
+
+msgid "None · initial commit"
+msgstr "Nessuno · commit iniziale"
+
+msgid "Parents"
+msgstr "Parent"
+
+msgid "{count} file changed"
+msgid_plural "{count} files changed"
+msgstr[0] "{count} file modificato"
+msgstr[1] "{count} file modificati"
+
+msgid "Select a file to inspect its diff."
+msgstr "Seleziona un file per controllarne il diff."
+
+msgid "{upstream} and the current branch both have new commits. Git Desk only fast-forwards when pulling, so it will not merge them automatically.\n\nOpen Branches and choose Merge into Current Branch… for {upstream}."
+msgstr "{upstream} e il branch corrente hanno entrambi nuovi commit. Git Desk esegue solo fast-forward durante Pull, quindi non li unirà automaticamente.\n\nApri Branch e scegli Unisci nel branch corrente… per {upstream}."
+
+msgid "The current branch and its upstream both have new commits. Git Desk only fast-forwards when pulling, so it will not merge them automatically.\n\nOpen Branches and merge the upstream branch into the current branch."
+msgstr "Il branch corrente e il suo upstream hanno entrambi nuovi commit. Git Desk esegue solo fast-forward durante Pull, quindi non li unirà automaticamente.\n\nApri Branch ed esegui il merge del branch upstream nel branch corrente."
+
+msgid "Branches Have Diverged"
+msgstr "I branch sono divergenti"
+
+msgid "Open Branches"
+msgstr "Apri Branch"
+
+msgid "just now"
+msgstr "adesso"
+
+msgid "{count} minute ago"
+msgid_plural "{count} minutes ago"
+msgstr[0] "{count} minuto fa"
+msgstr[1] "{count} minuti fa"
+
+msgid "{count} hour ago"
+msgid_plural "{count} hours ago"
+msgstr[0] "{count} ora fa"
+msgstr[1] "{count} ore fa"
+
+msgid "{count} day ago"
+msgid_plural "{count} days ago"
+msgstr[0] "{count} giorno fa"
+msgstr[1] "{count} giorni fa"
+
+msgid "{count} month ago"
+msgid_plural "{count} months ago"
+msgstr[0] "{count} mese fa"
+msgstr[1] "{count} mesi fa"
+
+msgid "{count} year ago"
+msgid_plural "{count} years ago"
+msgstr[0] "{count} anno fa"
+msgstr[1] "{count} anni fa"
+
+msgid "Jan"
+msgstr "gen"
+
+msgid "Feb"
+msgstr "feb"
+
+msgid "Mar"
+msgstr "mar"
+
+msgid "Apr"
+msgstr "apr"
+
+msgid "May"
+msgstr "mag"
+
+msgid "Jun"
+msgstr "giu"
+
+msgid "Jul"
+msgstr "lug"
+
+msgid "Aug"
+msgstr "ago"
+
+msgid "Sep"
+msgstr "set"
+
+msgid "Oct"
+msgstr "ott"
+
+msgid "Nov"
+msgstr "nov"
+
+msgid "Dec"
+msgstr "dic"
+
+msgid "Learn Git concepts and workflows at your own pace."
+msgstr "Impara concetti e workflow Git al tuo ritmo."
+
+msgid "Open Git Guide"
+msgstr "Apri Guida Git"
+
+msgid "Back to Git Desk"
+msgstr "Torna a Git Desk"
