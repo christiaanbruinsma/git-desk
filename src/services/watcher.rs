@@ -9,6 +9,8 @@ use gtk::gio::prelude::*;
 use gtk::{gio, glib};
 use walkdir::WalkDir;
 
+use crate::validate::safe_normalize_path;
+
 pub struct RepositoryWatcher {
     monitors: Rc<RefCell<Vec<gio::FileMonitor>>>,
     debounce: Rc<RefCell<Option<glib::SourceId>>>,
@@ -18,6 +20,7 @@ pub struct RepositoryWatcher {
 
 impl RepositoryWatcher {
     pub fn new(root: PathBuf, callback: Rc<dyn Fn()>) -> Self {
+        let root = safe_normalize_path(&root).unwrap_or(root);
         let watcher = Self {
             monitors: Rc::new(RefCell::new(Vec::new())),
             debounce: Rc::new(RefCell::new(None)),

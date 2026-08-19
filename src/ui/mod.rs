@@ -33,6 +33,19 @@ scrollbar slider {
         }
     });
 }
+
+/// Installs theme support for Git Desk, including dark mode preference.
+pub fn install_theme_support() {
+    use std::sync::Once;
+
+    static THEME_INIT: Once = Once::new();
+    THEME_INIT.call_once(|| {
+        // Respect system dark mode preference
+        if let Some(settings) = gtk::Settings::default() {
+            settings.set_gtk_application_prefer_dark_theme(true);
+        }
+    });
+}
 pub fn app_menu_button() -> gtk::MenuButton {
     let menu_model = gtk::gio::Menu::new();
     menu_model.append(Some(&tr("About Git Desk")), Some("app.about"));

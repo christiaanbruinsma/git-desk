@@ -3,6 +3,7 @@ use std::{
     path::{Path, PathBuf},
 };
 
+use log::warn;
 use serde::{Deserialize, Serialize};
 
 const MAX_RECENT: usize = 10;
@@ -31,9 +32,13 @@ impl RecentProjects {
 
     pub fn load(&self) -> Vec<RecentProject> {
         let Ok(contents) = fs::read_to_string(&self.file) else {
+            warn!("Failed to read recent projects file: {}", self.file.display());
             return Vec::new();
         };
-        serde_json::from_str(&contents).unwrap_or_default()
+        serde_json::from_str(&contents).unwrap_or_else(|e| {
+            warn!("Failed to parse recent projects file: {}", e);
+            Vec::new()
+        })
     }
 
     pub fn add(&self, path: &Path) {

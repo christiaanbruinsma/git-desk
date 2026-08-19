@@ -98,21 +98,12 @@ impl WelcomeView {
         let actions = gtk::Box::new(Orientation::Horizontal, 12);
         actions.set_homogeneous(true);
 
-        let open = action_button(
-            "document-open-symbolic",
-            &tr("Open Project"),
-            &tr("Open an existing Git repository or project folder"),
-        );
-        let setup = action_button(
-            "list-add-symbolic",
-            &tr("Set Up Git"),
-            &tr("Choose a project folder and start version control"),
-        );
-        let clone = action_button(
-            "edit-copy-symbolic",
-            &tr("Clone Repository"),
-            &tr("Clone an existing Git repository to this computer"),
-        );
+        let open = crate::ui::primary_button(&tr("Open Project"));
+        open.set_tooltip_text(Some(&tr("Open an existing Git repository or project folder")));
+        let setup = crate::ui::secondary_button(&tr("Set Up Git"));
+        setup.set_tooltip_text(Some(&tr("Choose a project folder and start version control")));
+        let clone = crate::ui::secondary_button(&tr("Clone Repository"));
+        clone.set_tooltip_text(Some(&tr("Clone an existing Git repository to this computer")));
 
         actions.append(&open);
         actions.append(&setup);

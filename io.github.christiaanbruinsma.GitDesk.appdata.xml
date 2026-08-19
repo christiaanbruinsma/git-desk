@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>io.github.christiaanbruinsma.GitDesk.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  
+  <name>Git Desk</name>
+  <summary>A native GNOME Git client</summary>
+  
+  <description>
+    <p>
+      Git Desk is a powerful yet easy-to-use Git client designed for GNOME.
+      It provides a clean, modern interface for managing your Git repositories
+      with all the features you need for daily development.
+    </p>
+    <p>
+      Whether you're a beginner learning Git or an experienced developer,
+      Git Desk makes version control approachable without hiding how Git works.
+    </p>
+    <ul>
+      <li>Repository management (clone, init, open)</li>
+      <li>Commit, push, pull, and more</li>
+      <li>Branch and tag management</li>
+      <li>Stash support</li>
+      <li>Diff viewer with syntax highlighting</li>
+      <li>History graph visualization</li>
+      <li>Built-in Git Guide for learning</li>
+    </ul>
+  </description>
+  
+  <categories>
+    <category>Development</category>
+    <category>VersionControl</category>
+  </categories>
+  
+  <keywords>
+    <keyword>git</keyword>
+    <keyword>version-control</keyword>
+    <keyword>development</keyword>
+    <keyword>programming</keyword>
+    <keyword>gnome</keyword>
+  </keywords>
+  
+  <url type="homepage">https://github.com/christiaanbruinsma/git-desk</url>
+  <url type="bugtracker">https://github.com/christiaanbruinsma/git-desk/issues</url>
+  <url type="help">https://github.com/christiaanbruinsma/git-desk#readme</url>
+  
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/christiaanbruinsma/git-desk/main/screenshots/screenshot1.png</image>
+      <caption>Git Desk main window</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/christiaanbruinsma/git-desk/main/screenshots/screenshot2.png</image>
+      <caption>Commit history view</caption>
+    </screenshot>
+  </screenshots>
+  
+  <releases>
+    <release version="0.9.0" date="2024-01-01">
+      <description>
+        <p>Initial stable release of Git Desk.</p>
+        <ul>
+          <li>Repository management</li>
+          <li>Basic commit and push/pull</li>
+          <li>Branch and tag support</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  
+  <content_rating type="oars-1.1" />
+</component>

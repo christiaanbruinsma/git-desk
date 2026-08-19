@@ -44,5 +44,14 @@ pub fn run() -> gtk::glib::ExitCode {
         window.present();
     });
 
+    // Keyboard shortcuts voor main window
+    app.set_accels_for_action("win.refresh", &["<Primary>r"]);
+    app.set_accels_for_action("win.stage-all", &["<Primary>a"]);
+    app.set_accels_for_action("win.unstage-all", &["<Primary>Shift+a"]);
+    app.set_accels_for_action("win.commit", &["<Primary>Enter"]);
+    app.set_accels_for_action("win.search", &["<Primary>f"]);
+    app.set_accels_for_action("win.undo", &["<Primary>z"]);
+    app.set_accels_for_action("win.redo", &["<Primary>Shift+z"]);
+
     app.run()
 }

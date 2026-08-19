@@ -24,7 +24,30 @@ finish-args:
   - --device=dri
   - --share=network
   - --filesystem=home
+  - --filesystem=xdg-config/git:ro
+  - --filesystem=xdg-cache/git:rw
+  - --filesystem=~/.ssh:ro
+  - --env=GIT_TERMINAL_PROMPT=0
+  - --env=GIT_SSH_COMMAND=ssh -o BatchMode=yes
   - --talk-name=org.freedesktop.Flatpak
+
+metadata:
+  name: Git Desk
+  summary: A native GNOME Git client
+  description: |
+    Git Desk is a powerful yet easy-to-use Git client designed for GNOME.
+    It provides a clean, modern interface for managing your Git repositories
+    with all the features you need for daily development.
+  keywords:
+    - git
+    - version-control
+    - development
+    - programming
+    - gnome
+  categories:
+    - Development;
+    - VersionControl;
+  icon: io.github.christiaanbruinsma.GitDesk
 
 modules:
   - name: git-desk

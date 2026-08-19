@@ -4,6 +4,7 @@ use std::{
     path::PathBuf,
 };
 
+use log::warn;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]
@@ -35,9 +36,13 @@ impl GuidePersonalStore {
 
     pub fn load(&self) -> GuidePersonalData {
         let Ok(contents) = fs::read_to_string(&self.file) else {
+            warn!("Failed to read guide personal data file: {}", self.file.display());
             return GuidePersonalData::default();
         };
-        serde_json::from_str(&contents).unwrap_or_default()
+        serde_json::from_str(&contents).unwrap_or_else(|e| {
+            warn!("Failed to parse guide personal data file: {}", e);
+            GuidePersonalData::default()
+        })
     }
 
     pub fn save(&self, data: &GuidePersonalData) {

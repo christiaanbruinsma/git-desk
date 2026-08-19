@@ -5,12 +5,15 @@ use std::{
 };
 
 use gtk::gio;
+use log::{debug, error, info, warn};
 use thiserror::Error;
 
 use crate::git::{
     models::{Branch, ChangedFile, Commit, RepositoryStatus, StashEntry},
     parser::{parse_history, parse_numstat_z, parse_status_porcelain_v2},
 };
+use crate::validate::{validate_branch_name, validate_commit_message, validate_git_url, validate_repository_path, ValidationError};
+
 
 #[derive(Debug, Error)]
 pub enum GitError {
@@ -25,6 +28,11 @@ pub type Result<T> = std::result::Result<T, GitError>;
 #[derive(Debug, Clone)]
 pub struct GitBackend {
     path: PathBuf,
+    // Caching voor performance
+    status_cache: std::sync::Arc<tokio::sync::Mutex<Option<(RepositoryStatus, std::time::Instant)>>>,
+    branches_cache: std::sync::Arc<tokio::sync::Mutex<Option<(Vec<Branch>, std::time::Instant)>>>,
+    tags_cache: std::sync::Arc<tokio::sync::Mutex<Option<(Vec<TagEntry>, std::time::Instant)>>>,
+    cache_ttl: std::time::Duration,
 }
 
 #[derive(Debug)]
@@ -33,6 +41,15 @@ struct CommandOutput {
     stdout: String,
     stderr: String,
 }
+
+#[derive(Debug, Clone)]
+pub struct RepositoryState {
+    pub status: RepositoryStatus,
+    pub branches: Vec<Branch>,
+    pub tags: Vec<TagEntry>,
+    pub stashes: Vec<StashEntry>,
+}
+
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct TagEntry {
@@ -56,7 +73,13 @@ pub struct HistoryOperation {
 
 impl GitBackend {
     pub fn new(path: impl Into<PathBuf>) -> Self {
-        Self { path: path.into() }
+        Self {
+            path: path.into(),
+            status_cache: std::sync::Arc::new(tokio::sync::Mutex::new(None)),
+            branches_cache: std::sync::Arc::new(tokio::sync::Mutex::new(None)),
+            tags_cache: std::sync::Arc::new(tokio::sync::Mutex::new(None)),
+            cache_ttl: std::time::Duration::from_secs(2), // Cache voor 2 seconden
+        }
     }
 
     pub fn path(&self) -> &Path {
@@ -90,6 +113,13 @@ impl GitBackend {
     }
 
     pub async fn clone_repository(url: String, parent: PathBuf) -> Result<Self> {
+        validate_git_url(&url).map_err(|e| GitError::Command(e.to_string()))?;
+        validate_repository_path(&parent).map_err(|e| GitError::Command(e.to_string()))?;
+        validate_repository_path(&parent).map_err(|e| GitError::Command(e.to_string()))?;
+        
+        info!("Cloning repository from URL: {}", url);
+        debug!("Destination parent: {}", parent.display());
+        
         let name = clone_directory_name(&url).ok_or_else(|| {
             GitError::Command(
                 "Git Desk could not determine a repository name from that URL.".into(),
@@ -132,6 +162,18 @@ impl GitBackend {
     }
 
     pub async fn status(&self) -> Result<RepositoryStatus> {
+        // Check cache
+        {
+            let cache = self.status_cache.lock().await;
+            if let Some((status, timestamp)) = &*cache {
+                if timestamp.elapsed() < self.cache_ttl {
+                    debug!("Returning cached status");
+                    return Ok(status.clone());
+                }
+            }
+        }
+
+        // Execute command
         let output = self
             .run(vec![
                 "--no-optional-locks".into(),
@@ -142,7 +184,16 @@ impl GitBackend {
                 "--untracked-files=all".into(),
             ])
             .await?;
-        Ok(parse_status_porcelain_v2(&output.stdout))
+
+        let status = parse_status_porcelain_v2(&output.stdout);
+
+        // Update cache
+        {
+            let mut cache = self.status_cache.lock().await;
+            *cache = Some((status.clone(), std::time::Instant::now()));
+        }
+
+        Ok(status)
     }
 
     pub async fn stage(&self, path: String, old_path: Option<String>) -> Result<()> {
@@ -236,8 +287,15 @@ impl GitBackend {
     }
 
     pub async fn commit(&self, message: String) -> Result<()> {
+        validate_commit_message(&message).map_err(|e| GitError::Command(e.to_string()))?;
+        info!("Committing with message: {}", message);
         self.run(vec!["commit".into(), "-m".into(), message.into()])
-            .await?;
+            .await
+            .map_err(|e| {
+                error!("Commit failed: {}", e);
+                e
+            })?;
+        info!("Commit successful");
         Ok(())
     }
 
@@ -416,6 +474,30 @@ impl GitBackend {
         Ok(parse_history(&output.stdout))
     }
 
+    /// Paginated history for lazy loading.
+    /// This allows loading commits in batches as the user scrolls.
+    pub async fn history_paginated(&self, skip: usize, limit: usize) -> Result<Vec<Commit>> {
+        debug!("Loading history (skip={}, limit={})", skip, limit);
+        
+        let format = "%H%x1f%P%x1f%an%x1f%ae%x1f%at%x1f%aI%x1f%s%x1f%D%x1e";
+        let output = self
+            .run_allow_failure(vec![
+                "log".into(),
+                "--all".into(),
+                "--topo-order".into(),
+                format!("--skip={skip}").into(),
+                format!("--max-count={limit}").into(),
+                format!("--format={format}").into(),
+            ])
+            .await?;
+
+        if !output.success {
+            return Ok(Vec::new());
+        }
+
+        Ok(parse_history(&output.stdout))
+    }
+
     pub async fn outgoing_commits(&self, upstream: String) -> Result<Vec<Commit>> {
         let format = "%H%x1f%P%x1f%an%x1f%ae%x1f%at%x1f%aI%x1f%s%x1f%D%x1e";
         let range = format!("{upstream}..HEAD");
@@ -447,7 +529,27 @@ impl GitBackend {
         Ok(parse_history(&output.stdout))
     }
 
-    pub async fn stashes(&self) -> Result<Vec<StashEntry>> {
+    
+    /// Batch function to get multiple repository states in a single call.
+    /// This is more efficient than calling each function separately.
+    pub async fn get_repository_state(&self) -> Result<RepositoryState> {
+        info!("Fetching repository state (batched)");
+        
+        let (status, branches, tags, stashes) = tokio::join!(
+            self.status(),
+            self.branches(),
+            self.tags(),
+            self.stashes()
+        );
+
+        Ok(RepositoryState {
+            status: status?,
+            branches: branches?,
+            tags: tags?,
+            stashes: stashes?,
+        })
+    }
+pub async fn stashes(&self) -> Result<Vec<StashEntry>> {
         let output = self
             .run_allow_failure(vec![
                 "stash".into(),
@@ -587,6 +689,17 @@ impl GitBackend {
     }
 
     pub async fn branches(&self) -> Result<Vec<Branch>> {
+        // Check cache
+        {
+            let cache = self.branches_cache.lock().await;
+            if let Some((branches, timestamp)) = &*cache {
+                if timestamp.elapsed() < self.cache_ttl {
+                    debug!("Returning cached branches");
+                    return Ok(branches.clone());
+                }
+            }
+        }
+
         let output = self
             .run_allow_failure(vec![
                 "for-each-ref".into(),
@@ -640,21 +753,34 @@ impl GitBackend {
             );
         }
 
+        // Update cache
+        {
+            let mut cache = self.branches_cache.lock().await;
+            *cache = Some((branches.clone(), std::time::Instant::now()));
+        }
+
         Ok(branches)
     }
 
     pub async fn create_and_switch_branch(&self, name: String) -> Result<()> {
+        validate_branch_name(&name).map_err(|e| GitError::Command(e.to_string()))?;
+        info!("Creating and switching to branch: {}", name);
         self.run(vec!["switch".into(), "-c".into(), name.into()])
             .await?;
         Ok(())
     }
 
     pub async fn switch_branch(&self, name: String) -> Result<()> {
+        validate_branch_name(&name).map_err(|e| GitError::Command(e.to_string()))?;
+        info!("Switching to branch: {}", name);
         self.run(vec!["switch".into(), name.into()]).await?;
         Ok(())
     }
 
     pub async fn rename_branch(&self, old_name: String, new_name: String) -> Result<()> {
+        validate_branch_name(&old_name).map_err(|e| GitError::Command(e.to_string()))?;
+        validate_branch_name(&new_name).map_err(|e| GitError::Command(e.to_string()))?;
+        info!("Renaming branch from {} to {}", old_name, new_name);
         self.run(vec![
             "branch".into(),
             "-m".into(),
@@ -666,6 +792,8 @@ impl GitBackend {
     }
 
     pub async fn delete_branch(&self, name: String) -> Result<()> {
+        validate_branch_name(&name).map_err(|e| GitError::Command(e.to_string()))?;
+        info!("Deleting branch: {}", name);
         self.run(vec!["branch".into(), "-d".into(), name.into()])
             .await?;
         Ok(())
@@ -849,6 +977,17 @@ impl GitBackend {
     }
 
     pub async fn tags(&self) -> Result<Vec<TagEntry>> {
+        // Check cache
+        {
+            let cache = self.tags_cache.lock().await;
+            if let Some((tags, timestamp)) = &*cache {
+                if timestamp.elapsed() < self.cache_ttl {
+                    debug!("Returning cached tags");
+                    return Ok(tags.clone());
+                }
+            }
+        }
+
         let output = self
             .run(vec![
                 "for-each-ref".into(),
@@ -887,6 +1026,12 @@ impl GitBackend {
                     String::new()
                 },
             });
+        }
+
+        // Update cache
+        {
+            let mut cache = self.tags_cache.lock().await;
+            *cache = Some((tags.clone(), std::time::Instant::now()));
         }
 
         Ok(tags)
@@ -1116,5 +1261,128 @@ fn clone_directory_name(url: &str) -> Option<String> {
         None
     } else {
         Some(name.to_string())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use tempfile::tempdir;
+    use std::path::PathBuf;
+
+    #[tokio::test]
+    async fn test_validate_git_url_integration() {
+        // Test valid URLs
+        assert!(validate_git_url("https://github.com/user/repo.git").is_ok());
+        assert!(validate_git_url("git@github.com:user/repo.git").is_ok());
+        
+        // Test invalid URLs (command injection attempts)
+        assert!(validate_git_url("").is_err());
+        assert!(validate_git_url("; rm -rf /").is_err());
+        assert!(validate_git_url("https://example.com; ls").is_err());
+    }
+
+    #[tokio::test]
+    async fn test_init_repository() {
+        let temp_dir = tempdir().unwrap();
+        let path = temp_dir.path().to_path_buf();
+        
+        let result = GitBackend::init(path.clone()).await;
+        assert!(result.is_ok());
+        
+        let backend = result.unwrap();
+        assert!(path.join(".git").exists());
+    }
+
+    #[tokio::test]
+    async fn test_discover_existing_repo() {
+        let temp_dir = tempdir().unwrap();
+        let path = temp_dir.path().to_path_buf();
+        
+        // First initialize a repo
+        let _ = GitBackend::init(path.clone()).await;
+        
+        // Then try to discover it
+        let result = GitBackend::discover(path).await.unwrap();
+        assert!(result.is_some());
+    }
+
+    #[tokio::test]
+    async fn test_discover_nonexistent_repo() {
+        let temp_dir = tempdir().unwrap();
+        let path = temp_dir.path().to_path_buf();
+        
+        let result = GitBackend::discover(path).await.unwrap();
+        assert!(result.is_none());
+    }
+
+    #[tokio::test]
+    async fn test_status_parsing() {
+        let temp_dir = tempdir().unwrap();
+        let path = temp_dir.path().to_path_buf();
+        
+        // Initialize a repo
+        let backend = GitBackend::init(path.clone()).await.unwrap();
+        
+        // Get status (should work on empty repo)
+        let result = backend.status().await;
+        assert!(result.is_ok());
+        
+        let status = result.unwrap();
+        assert_eq!(status.branch, "main");
+        assert!(status.changes.is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_commit_validation() {
+        // Test valid commit message
+        assert!(validate_commit_message("Fix bug").is_ok());
+        assert!(validate_commit_message("Add new feature").is_ok());
+        
+        // Test invalid commit messages
+        assert!(validate_commit_message("").is_err());
+        assert!(validate_commit_message("Fix bug\nAnother line").is_err());
+    }
+
+    #[tokio::test]
+    async fn test_branch_name_validation() {
+        // Test valid branch names
+        assert!(validate_branch_name("main").is_ok());
+        assert!(validate_branch_name("feature/new-feature").is_ok());
+        
+        // Test invalid branch names
+        assert!(validate_branch_name("").is_err());
+        assert!(validate_branch_name("; rm -rf /").is_err());
+        assert!(validate_branch_name(".hidden").is_err());
+        assert!(validate_branch_name("-invalid").is_err());
+    }
+
+    #[test]
+    fn test_clone_directory_name() {
+        // Test valid URLs
+        assert_eq!(
+            clone_directory_name("https://github.com/user/repo.git"),
+            Some("repo".to_string())
+        );
+        assert_eq!(
+            clone_directory_name("git@github.com:user/repo.git"),
+            Some("repo".to_string())
+        );
+        assert_eq!(
+            clone_directory_name("https://github.com/user/my-repo"),
+            Some("my-repo".to_string())
+        );
+        
+        // Test URLs with .git suffix
+        assert_eq!(
+            clone_directory_name("https://github.com/user/my-repo.git"),
+            Some("my-repo".to_string())
+        );
+        
+        // Test invalid cases
+        assert_eq!(clone_directory_name(""), None);
+        assert_eq!(clone_directory_name("../repo"), None);
+        assert_eq!(clone_directory_name("."), None);
+        assert_eq!(clone_directory_name(".."), None);
     }
 }
