@@ -59,3 +59,38 @@ pub fn app_menu_button() -> gtk::MenuButton {
     button.set_menu_model(Some(&menu_model));
     button
 }
+
+/// Creates a primary action button following GNOME HIG guidelines.
+/// Use for the main/preferred action in a dialog or window.
+pub fn primary_button(label: &str) -> gtk::Button {
+    let button = gtk::Button::with_label(label);
+    button.add_css_class("suggested-action");
+    button
+}
+
+/// Creates a secondary action button following GNOME HIG guidelines.
+/// Use for secondary or less prominent actions.
+pub fn secondary_button(label: &str) -> gtk::Button {
+    let button = gtk::Button::with_label(label);
+    button.add_css_class("flat");
+    button
+}
+
+/// Creates a destructive action button following GNOME HIG guidelines.
+/// Use for actions that destroy data (delete, remove, etc.).
+pub fn destructive_button(label: &str) -> gtk::Button {
+    let button = gtk::Button::with_label(label);
+    button.add_css_class("destructive-action");
+    button
+}
+
+/// Creates an icon-only button following GNOME HIG guidelines.
+pub fn icon_button(icon_name: &str, tooltip: Option<&str>) -> gtk::Button {
+    let button = gtk::Button::from_icon_name(icon_name);
+    button.add_css_class("flat");
+    button.add_css_class("circular");
+    if let Some(tooltip_text) = tooltip {
+        button.set_tooltip_text(Some(tooltip_text));
+    }
+    button
+}

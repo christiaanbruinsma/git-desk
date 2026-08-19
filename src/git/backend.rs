@@ -5,14 +5,14 @@ use std::{
 };
 
 use gtk::gio;
-use log::{debug, error, info, warn};
+use log::{debug, error, info};
 use thiserror::Error;
 
 use crate::git::{
     models::{Branch, ChangedFile, Commit, RepositoryStatus, StashEntry},
     parser::{parse_history, parse_numstat_z, parse_status_porcelain_v2},
 };
-use crate::validate::{validate_branch_name, validate_commit_message, validate_git_url, validate_repository_path, ValidationError};
+use crate::validate::{validate_branch_name, validate_commit_message, validate_git_url, validate_repository_path};
 
 
 #[derive(Debug, Error)]
@@ -29,9 +29,9 @@ pub type Result<T> = std::result::Result<T, GitError>;
 pub struct GitBackend {
     path: PathBuf,
     // Caching voor performance
-    status_cache: std::sync::Arc<tokio::sync::Mutex<Option<(RepositoryStatus, std::time::Instant)>>>,
-    branches_cache: std::sync::Arc<tokio::sync::Mutex<Option<(Vec<Branch>, std::time::Instant)>>>,
-    tags_cache: std::sync::Arc<tokio::sync::Mutex<Option<(Vec<TagEntry>, std::time::Instant)>>>,
+    status_cache: std::sync::Arc<std::sync::Mutex<Option<(RepositoryStatus, std::time::Instant)>>>,
+    branches_cache: std::sync::Arc<std::sync::Mutex<Option<(Vec<Branch>, std::time::Instant)>>>,
+    tags_cache: std::sync::Arc<std::sync::Mutex<Option<(Vec<TagEntry>, std::time::Instant)>>>,
     cache_ttl: std::time::Duration,
 }
 
@@ -75,9 +75,9 @@ impl GitBackend {
     pub fn new(path: impl Into<PathBuf>) -> Self {
         Self {
             path: path.into(),
-            status_cache: std::sync::Arc::new(tokio::sync::Mutex::new(None)),
-            branches_cache: std::sync::Arc::new(tokio::sync::Mutex::new(None)),
-            tags_cache: std::sync::Arc::new(tokio::sync::Mutex::new(None)),
+            status_cache: std::sync::Arc::new(std::sync::Mutex::new(None)),
+            branches_cache: std::sync::Arc::new(std::sync::Mutex::new(None)),
+            tags_cache: std::sync::Arc::new(std::sync::Mutex::new(None)),
             cache_ttl: std::time::Duration::from_secs(2), // Cache voor 2 seconden
         }
     }
@@ -164,7 +164,7 @@ impl GitBackend {
     pub async fn status(&self) -> Result<RepositoryStatus> {
         // Check cache
         {
-            let cache = self.status_cache.lock().await;
+            let cache = self.status_cache.lock().unwrap();
             if let Some((status, timestamp)) = &*cache {
                 if timestamp.elapsed() < self.cache_ttl {
                     debug!("Returning cached status");
@@ -189,7 +189,7 @@ impl GitBackend {
 
         // Update cache
         {
-            let mut cache = self.status_cache.lock().await;
+            let mut cache = self.status_cache.lock().unwrap();
             *cache = Some((status.clone(), std::time::Instant::now()));
         }
 
@@ -533,20 +533,18 @@ impl GitBackend {
     /// Batch function to get multiple repository states in a single call.
     /// This is more efficient than calling each function separately.
     pub async fn get_repository_state(&self) -> Result<RepositoryState> {
-        info!("Fetching repository state (batched)");
+        info!("Fetching repository state (sequential)");
         
-        let (status, branches, tags, stashes) = tokio::join!(
-            self.status(),
-            self.branches(),
-            self.tags(),
-            self.stashes()
-        );
+        let status = self.status().await?;
+        let branches = self.branches().await?;
+        let tags = self.tags().await?;
+        let stashes = self.stashes().await?;
 
         Ok(RepositoryState {
-            status: status?,
-            branches: branches?,
-            tags: tags?,
-            stashes: stashes?,
+            status,
+            branches,
+            tags,
+            stashes,
         })
     }
 pub async fn stashes(&self) -> Result<Vec<StashEntry>> {
@@ -691,7 +689,7 @@ pub async fn stashes(&self) -> Result<Vec<StashEntry>> {
     pub async fn branches(&self) -> Result<Vec<Branch>> {
         // Check cache
         {
-            let cache = self.branches_cache.lock().await;
+            let cache = self.branches_cache.lock().unwrap();
             if let Some((branches, timestamp)) = &*cache {
                 if timestamp.elapsed() < self.cache_ttl {
                     debug!("Returning cached branches");
@@ -755,7 +753,7 @@ pub async fn stashes(&self) -> Result<Vec<StashEntry>> {
 
         // Update cache
         {
-            let mut cache = self.branches_cache.lock().await;
+            let mut cache = self.branches_cache.lock().unwrap();
             *cache = Some((branches.clone(), std::time::Instant::now()));
         }
 
@@ -979,7 +977,7 @@ pub async fn stashes(&self) -> Result<Vec<StashEntry>> {
     pub async fn tags(&self) -> Result<Vec<TagEntry>> {
         // Check cache
         {
-            let cache = self.tags_cache.lock().await;
+            let cache = self.tags_cache.lock().unwrap();
             if let Some((tags, timestamp)) = &*cache {
                 if timestamp.elapsed() < self.cache_ttl {
                     debug!("Returning cached tags");
@@ -1030,7 +1028,7 @@ pub async fn stashes(&self) -> Result<Vec<StashEntry>> {
 
         // Update cache
         {
-            let mut cache = self.tags_cache.lock().await;
+            let mut cache = self.tags_cache.lock().unwrap();
             *cache = Some((tags.clone(), std::time::Instant::now()));
         }
 
